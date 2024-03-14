@@ -5,7 +5,7 @@ export const AboutCard = () => {
     <section>
       <AboutNav/>
       <div>
-
+        {/* conditional rendering */}
       </div>
     </section>
   )

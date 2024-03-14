@@ -1,0 +1,14 @@
+@use "../abstracts/box" as *;
+
+button {
+  border: none;
+  border-radius: $radius-1;
+  background-color: var(--button-color-hover);
+  color: var(--text-color-2);
+  
+  &:hover {
+    background-color: var(--button-color-1);
+    color: var(--text-color-3);
+  }
+}
+

@@ -1,4 +1,4 @@
-export const HeaderNav = () => {
+export const HeaderNav = (): JSX.Element => {
   return (
     <nav>
       <ul>

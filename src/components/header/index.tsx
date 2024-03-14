@@ -1,9 +1,10 @@
 import { HeaderNav } from "../nav";
+import s from "./index.module.scss"
 
-export const PageHeader = () => {
+export const PageHeader = (): JSX.Element => {
   return (
-    <header>
-      <p>{"<Bernardo Stein/>"}</p>
+    <header className={s.header_container}>
+      <p className="title1 bold">{"{ BERNARDO STEIN }"}</p>
       <HeaderNav />
     </header>
   );

@@ -1,0 +1,61 @@
+@use "../abstracts/fonts" as *;
+
+.title1 {
+  font-size: $fontSize-1;
+}
+
+.title2 {
+  font-size: $fontSize-2;
+}
+
+.title3 {
+  font-size: $fontSize-3;
+}
+
+.title4 {
+  font-size: $fontSize-4;
+}
+
+.text1 {
+  font-size: $fontSize-5;
+}
+
+.text2 {
+  font-size: $fontSize-6;
+}
+
+.text3 {
+  font-size: $fontSize-7;
+}
+
+.bold {
+  font-weight: $fontWeight-700;
+}
+
+.s-bold {
+  font-weight: $fontWeight-600;
+}
+
+.medium {
+  font-weight: $fontWeight-500;
+}
+
+.regular {
+  font-weight: $fontWeight-400;
+}
+
+.thin {
+  font-weight: $fontWeight-300;
+}
+
+.height1{
+  line-height: $lineHeight-1;
+}
+
+.height2{
+  line-height: $lineHeight-2;
+}
+
+.height3{
+  line-height: $lineHeight-3;
+}

@@ -1,4 +1,4 @@
-export const AboutNav = () => {
+export const AboutNav = (): JSX.Element => {
   return (
     <nav>
       <ul>
@@ -7,5 +7,5 @@ export const AboutNav = () => {
         <li>Habilidades</li>
       </ul>
     </nav>
-  )
-}
+  );
+};

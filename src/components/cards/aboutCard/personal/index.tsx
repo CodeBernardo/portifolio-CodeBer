@@ -5,7 +5,7 @@ import {
   MdSchool,
 } from "../../../icons";
 
-export const PersonalInfo = () => {
+export const PersonalInfo = ():JSX.Element => {
   const iconsSize = 16;
 
   return (
