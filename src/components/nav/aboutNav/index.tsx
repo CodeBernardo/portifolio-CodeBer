@@ -5,13 +5,13 @@ export const AboutNav = (): JSX.Element => {
     <nav>
       <ul className={s.aboutNav_container}>
         <li>
-          <button className="title3">Informações</button>
+          <button className="text1 medium">Informações</button>
         </li>
         <li>
-          <button className="title3">Qualificações</button>
+          <button className="text1 medium">Qualificações</button>
         </li>
         <li>
-          <button className="title3">Habilidades</button>
+          <button className="text1 medium">Habilidades</button>
         </li>
       </ul>
     </nav>

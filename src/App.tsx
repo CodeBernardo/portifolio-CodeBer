@@ -5,14 +5,14 @@ import "./styles/main.scss";
 function App() {
   return (
     <>
-        <PageHeader />
+      <PageHeader />
       <div className="content_section">
         <WelcomeCard />
-        <MdKeyboardArrowDown size={70} className="arrow_down" />
+        <MdKeyboardArrowDown size={50} className="arrow_down" />
       </div>
       <div className="content_section">
         <AboutCard />
-        <MdKeyboardArrowDown size={70} className="arrow_down" />
+        <MdKeyboardArrowDown size={50} className="arrow_down" />
       </div>
     </>
   );

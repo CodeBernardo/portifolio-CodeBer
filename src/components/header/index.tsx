@@ -8,7 +8,7 @@ export const PageHeader = (): JSX.Element => {
       <header className={s.header_container}>
         <div>
           <img src={logo} alt="Imagem of bs logo" />
-          <p className="title1 bold">BERNARDO STEIN</p>
+          <p className="title2 bold">DEV. STEIN </p>
         </div>
         <HeaderNav />
       </header>

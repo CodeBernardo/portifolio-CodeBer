@@ -5,6 +5,7 @@ button {
   border-radius: $radius-2;
   background-color: var(--button-color-hover);
   color: var(--text-color-2);
+  font-family: var(--fontFamily-1);
   cursor: pointer;
   
   &:hover {

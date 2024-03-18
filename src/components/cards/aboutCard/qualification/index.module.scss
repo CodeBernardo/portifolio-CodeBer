@@ -1,0 +1,11 @@
+.qualifications_article {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.qualifications_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

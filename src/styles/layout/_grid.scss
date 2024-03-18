@@ -2,11 +2,14 @@
 .content_section {
   height: 100vh;
   display: grid;
-  width: 90%;
-  margin: 0 auto;
+  grid-template-rows: 2fr 1fr;
+  width: 80%;
+  margin: 0rem auto;
+  margin-bottom: 2rem;
 
   .arrow_down {
     justify-self: center;
-    color: var(--title-color-3);
+    margin-top: 3rem;
+    color: var(--title-color-2);
   }
 }

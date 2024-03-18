@@ -1,10 +1,5 @@
 import { FaLinkedin, GrDocumentDownload, SiGithub } from "../../icons";
 import welcome_img from "../../../assets/images/OIG4.nBa.XCU_fE-removebg-preview.png";
-// import welcome_img from "../../../assets/images/OIG2-removebg-preview.png";
-// import welcome_img from "../../../assets/images/OIG3__1_-removebg-preview.png";
-// import welcome_img from "../../../assets/images/OIG4__1_-removebg-preview.png";
-// import welcome_img from "../../../assets/images/baixados (1).png";
-// import welcome_img from "../../../assets/images/welcome-img.png";
 import s from "./index.module.scss";
 
 export const WelcomeCard = (): JSX.Element => {
@@ -20,23 +15,23 @@ export const WelcomeCard = (): JSX.Element => {
               Olá, meu nome é <br /> Bernardo Stein,
             </h1>
 
-            <p className={`title3 ${s.welcome_bio}`}>
-              Eu sou um desenvolvedor full stack especializado em construir
+            <p className={`title4 ${s.welcome_bio}`}>
+              sou um desenvolvedor full stack especializado em construir
               experiências digitais excepcionais.
             </p>
           </div>
           <div className={s.buttons_container}>
-            <button className="title3">Contato</button>
-            <button className="title3">
+            <button className="text1">Contato</button>
+            <button className="text1">
               <GrDocumentDownload /> Download CV
             </button>
           </div>
           <div className={s.socialIcons_container}>
             <button>
-              <FaLinkedin size={30} />
+              <FaLinkedin size={22} />
             </button>
             <button>
-              <SiGithub size={30} />
+              <SiGithub size={22} />
             </button>
           </div>
         </div>
