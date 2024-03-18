@@ -1,0 +1,23 @@
+.skills_container {
+  color: var(--text-color-3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  h2,h3 {
+    color: var(--title-color-2);
+  }
+  
+  .techs_container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}

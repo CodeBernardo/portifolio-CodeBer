@@ -9,14 +9,14 @@ import s from "./index.module.scss";
 export const AboutCard = () => {
   return (
     <section className={s.second_section}>
-      <h2 className="title2">Sobre mim</h2>
+      <h2 className="title2">ABOUT</h2>
       <div className={s.about_container}>
         <img src={aboutImg} alt="About image" />
         <div>
           <AboutNav />
           <div className={s.about_content_container}>
-            {/* <PersonalInfo /> */}
-            <Qualifications />
+            <PersonalInfo />
+            {/* <Qualifications /> */}
             {/* <SkillsList /> */}
           </div>
         </div>

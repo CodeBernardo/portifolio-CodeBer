@@ -1,4 +1,5 @@
 import {
+  BiLogoPostgresql,
   BiLogoSpringBoot,
   FaAngular,
   FaJava,
@@ -15,7 +16,6 @@ import {
   SiJest,
   SiNestjs,
   SiNpm,
-  SiPostgresql,
   SiPrisma,
   SiPython,
   SiReact,
@@ -26,7 +26,7 @@ import {
 } from "../../components/icons";
 import { Skill } from "../../interfaces";
 
-const iconSize = 22;
+const iconSize = 40;
 
 export const hardSkillsList: Skill[] = [
   {
@@ -95,7 +95,7 @@ export const hardSkillsList: Skill[] = [
   },
   {
     name: "PostgreSQL",
-    icon: <SiPostgresql size={iconSize} />,
+    icon: <BiLogoPostgresql size={iconSize} />,
   },
   {
     name: "Wordpress",

@@ -1,5 +1,6 @@
-@use "./base/reset" as *;
-@use "./base/theme" as *;
-@use "./base/buttons" as *;
-@use "./base/typhography" as *;
-@use "./layout/_grid.scss" as *;
+@use "./base/reset";
+@use "./base/theme";
+@use "./base/buttons";
+@use "./base/typhography";
+@use "./layout/_grid.scss";
+@use "./abstracts/icons";

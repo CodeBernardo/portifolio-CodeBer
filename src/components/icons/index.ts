@@ -6,7 +6,7 @@ import {
   MdWork,
   MdKeyboardArrowDown,
 } from "react-icons/md";
-import { BiLogoSpringBoot } from "react-icons/bi";
+import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
 import {
   FaNodeJs,
   FaJava,
@@ -31,7 +31,6 @@ import {
   SiGithub,
   SiNpm,
   SiBun,
-  SiPostgresql,
   SiWordpress,
   SiPython,
   SiJest,
@@ -39,6 +38,7 @@ import {
 } from "react-icons/si";
 import { TbWorldShare } from "react-icons/tb";
 import { GrDocumentDownload } from "react-icons/gr";
+
 
 
 export {
@@ -66,7 +66,6 @@ export {
   SiGithub,
   SiNpm,
   SiBun,
-  SiPostgresql,
   SiWordpress,
   SiPython,
   SiJest,
@@ -77,4 +76,5 @@ export {
   FaLinkedin,
   GrDocumentDownload,
   MdKeyboardArrowDown,
+  BiLogoPostgresql,
 };

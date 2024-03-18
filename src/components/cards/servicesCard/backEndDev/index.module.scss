@@ -1,0 +1,39 @@
+@use "../../../../styles/abstracts/_box.scss" as *;
+
+.serviceCard_container {
+  border: .125rem solid var(--title-color-2);
+  display: grid;
+  margin: 0 auto;
+  justify-items: center;
+  position: relative;
+  border-radius: $radius-3;
+  padding: 0 32px;
+  max-width: 500px;
+  height: 100%;
+
+  .icon {
+    color: var(--title-color-2);
+    background-color: var(--bg-color-4);
+    padding: 0 32px;
+    position: absolute;
+    top: -24px;
+  }
+}
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  gap: 32px;
+  padding: 48px 32px;
+
+  h3 {
+    color: var(--title-color-2);
+  }
+
+  p {
+    color: var(--text-color-2);
+  }
+}
