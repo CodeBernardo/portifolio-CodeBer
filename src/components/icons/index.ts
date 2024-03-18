@@ -4,6 +4,7 @@ import {
   MdPersonPinCircle,
   MdSchool,
   MdWork,
+  MdKeyboardArrowDown,
 } from "react-icons/md";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import {
@@ -37,6 +38,8 @@ import {
   SiDocker,
 } from "react-icons/si";
 import { TbWorldShare } from "react-icons/tb";
+import { GrDocumentDownload } from "react-icons/gr";
+
 
 export {
   MdEmail,
@@ -71,5 +74,7 @@ export {
   FaCode,
   FaDatabase,
   TbWorldShare,
-  FaLinkedin
+  FaLinkedin,
+  GrDocumentDownload,
+  MdKeyboardArrowDown,
 };

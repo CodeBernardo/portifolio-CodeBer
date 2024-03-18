@@ -1,12 +1,18 @@
-import { PageHeader } from "./components";
+import { AboutCard, PageHeader, WelcomeCard } from "./components";
+import { MdKeyboardArrowDown } from "./components/icons";
 import "./styles/main.scss";
 
 function App() {
   return (
     <>
-      <div id="background_overlay"></div>
-      <div className="default_grid">
         <PageHeader />
+      <div className="content_section">
+        <WelcomeCard />
+        <MdKeyboardArrowDown size={70} className="arrow_down" />
+      </div>
+      <div className="content_section">
+        <AboutCard />
+        <MdKeyboardArrowDown size={70} className="arrow_down" />
       </div>
     </>
   );

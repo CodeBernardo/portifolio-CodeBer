@@ -1,0 +1,12 @@
+
+.nav_container {
+  min-width: fit-content;
+
+  ul {
+    display: flex;
+    gap: 1.5rem;
+    li {
+      color: var(--white-fixed);
+    }
+  }
+}

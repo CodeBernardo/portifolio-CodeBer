@@ -1,4 +1,4 @@
-import { WelcomeCard } from "./welcomeCard/WelcomeCard";
+import { WelcomeCard } from "./welcomeCard";
 import { AboutCard } from "./aboutCard/index";
 import { ServicesCard } from "./servicesCard/index";
 import { ProjectsCard } from "./projectsCard/index";

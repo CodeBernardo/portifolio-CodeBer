@@ -1,0 +1,28 @@
+@use "../../../styles/abstracts/box" as *;
+
+.second_section {
+  h2 {
+    color: var(--title-color-2);
+  }
+}
+
+.about_container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10rem;
+  align-items: center;
+  height: 100%;
+
+
+  img {
+    height: 43.75rem;
+    transform: scaleX(-1);
+    border-radius: 3.125rem;
+  }
+}
+
+.about_content_container {
+  display: flex;
+  flex-direction: column;
+  height: 43.75rem;
+}

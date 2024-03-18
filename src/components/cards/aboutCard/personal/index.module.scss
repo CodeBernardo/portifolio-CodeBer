@@ -1,0 +1,31 @@
+.personalInfo_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-top: 2rem;
+
+  div {
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 2rem;
+
+      li {
+        height: 5rem;
+        
+        p {
+          display: flex;
+          align-items: center;
+          column-gap: 0.8rem;
+          color: var(--text-color-4);
+
+          .icon{
+            color: var(--icon-color)
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,12 @@
+import s from "./index.module.scss"
+
 export const HeaderNav = (): JSX.Element => {
   return (
-    <nav>
+    <nav className={s.nav_container}>
       <ul>
-        <li>Home</li>
-        <li>Projetos</li>
-        <li>Contato</li>
+        <li className="title4 regular">Home</li>
+        <li className="title4 regular">Projetos</li>
+        <li className="title4 regular">Contato</li>
       </ul>
     </nav>
   );

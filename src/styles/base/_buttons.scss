@@ -2,13 +2,14 @@
 
 button {
   border: none;
-  border-radius: $radius-1;
+  border-radius: $radius-2;
   background-color: var(--button-color-hover);
   color: var(--text-color-2);
+  cursor: pointer;
   
   &:hover {
     background-color: var(--button-color-1);
-    color: var(--text-color-3);
+    color: var(--white-fixed);
   }
 }
 

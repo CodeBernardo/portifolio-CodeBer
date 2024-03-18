@@ -1,0 +1,71 @@
+@use "../../../styles/abstracts/box.scss" as *;
+
+.welcome_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 7%;
+
+  img {
+    transform: scaleX(-1);
+    height: 48rem;
+  }
+}
+
+.welcome_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+  padding: 2rem;
+  border-radius: $radius-3;
+  margin-top: 3rem;
+  height: 100%;
+}
+
+.welcome_text_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stack_text {
+  color: var(--text-color-hightLight);
+}
+
+.welcome_text {
+  color: var(--title-color-2);
+}
+
+.welcome_bio {
+  color: var(--text-color-4);
+}
+
+.buttons_container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+
+  button {
+    height: 4rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+  }
+}
+
+.socialIcons_container {
+  button {
+    background-color: transparent;
+    color: var(--icon-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--icon-color);
+    }
+  }
+}
