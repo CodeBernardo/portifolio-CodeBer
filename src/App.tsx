@@ -1,6 +1,7 @@
-import { AboutCard, PageHeader, ServicesCard, WelcomeCard } from "./components";
+import { AboutCard, PageHeader, ServicesCard, WelcomeCard, ProjectsSection, PageFooter} from "./components";
 import { MdKeyboardArrowDown } from "./components/icons";
 import "./styles/main.scss";
+
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
         <ServicesCard />
         <MdKeyboardArrowDown size={50} className="arrow_down" />
       </div>
+      <div className="content_section">
+        <ProjectsSection />
+        <MdKeyboardArrowDown size={50} className="arrow_down" />
+      </div>
+      <PageFooter />
     </>
   );
 }

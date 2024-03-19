@@ -1,6 +1,6 @@
 import { WelcomeCard } from "./welcomeCard";
-import { AboutCard } from "./aboutCard/index";
-import { ServicesCard } from "./servicesCard/index";
-import { ProjectsCard } from "./projectsCard/index";
+import { AboutCard } from "./aboutCard";
+import { ServicesCard } from "./servicesCard";
+import { ProjectsSection } from "./projectsCard";
 
-export { WelcomeCard, AboutCard, ServicesCard, ProjectsCard };
+export { WelcomeCard, AboutCard, ServicesCard, ProjectsSection };

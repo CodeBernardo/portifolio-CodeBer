@@ -1,28 +1,29 @@
 import { backEndProjects } from "../../../data";
 import { ProjectCard } from "./projectCard";
+import s from "./index.module.scss";
 
-export const ProjectsCard = (): JSX.Element => {
+export const ProjectsSection = (): JSX.Element => {
   return (
-    <section>
-      <div>
-        <h2>Últimos projetos</h2>
-        <p>
-          Navegue por uma seleção de projetos recentes, abrangendo desde o
-          desenvolvimento de back-end até o front-end e o desenvolvimento
-          full-stack. Para visualizar mais, deslize ou clique em "Todos os
-          projetos" abaixo.
-        </p>
-        <button>Todos os projetos</button>
-      </div>
-      <div>
-        <ul>
-          {backEndProjects.map((project,i) => (
-            <li key={i}>
-              <ProjectCard project={project} type={"BACK END"}/>
-            </li>
-          ))}
-        </ul>
+    <section className={s.projects_section}>
+      <div className={s.projects_content}>
+        <div className={s.content_info}>
+          <h2 className="title2">PROJECTS</h2>
+          <p className="title4 height2">
+            Navegue por uma seleção de projetos recentes, abrangendo desde o
+            desenvolvimento de back-end até o front-end e o desenvolvimento
+            full-stack. Para visualizar mais, deslize ou clique em "Todos os
+            projetos" abaixo.
+          </p>
+          <button className="title4">Todos os projetos</button>
+        </div>
+          <ul>
+            {backEndProjects.map((project, i) => (
+              <li key={i}>
+                <ProjectCard project={project} type={"BACK END"} />
+              </li>
+            ))}
+          </ul>
       </div>
     </section>
   );
-}
+};
