@@ -5,7 +5,7 @@ import s from "./index.module.scss";
 export const WelcomeCard = (): JSX.Element => {
   return (
     <>
-      <section className={s.welcome_section}>
+      <section className={s.welcome_section} id="welcome_Section">
         <div className={s.welcome_container}>
           <div className={s.welcome_text_container}>
             <p className={`title4 medium ${s.stack_text}`}>

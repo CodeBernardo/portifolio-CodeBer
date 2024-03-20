@@ -1,16 +1,33 @@
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import {
   MdEmail,
   MdLocationPin,
   MdPersonPinCircle,
   MdSchool,
 } from "../../../icons";
-import s from "./index.module.scss"
+import s from "./index.module.scss";
 
-export const PersonalInfo = ():JSX.Element => {
+export const PersonalInfo = (): JSX.Element => {
   const iconsSize = 26;
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope);
+  const staggeredItens = stagger(0.035);
+
+  isInView &&
+    animate(
+      "li",
+      { opacity: [0, 1], y: [20, 0] },
+      { duration: 0.2, delay: staggeredItens },
+    );
 
   return (
-    <article className={s.personalInfo_container}>
+    <motion.article
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className={s.personalInfo_container}
+    >
       <h2 className="title2">Estou em busca de uma oportunidade.</h2>
       <p className="title4 height1">
         Olá! Sou Bernardo, um apaixonado por tecnologia e inovação. Atualmente,
@@ -20,10 +37,11 @@ export const PersonalInfo = ():JSX.Element => {
         realidade com código.
       </p>
       <div>
-        <ul>
+        <ul ref={scope}>
           <li>
             <p className="text1">
-              <MdPersonPinCircle className={s.icon} size={iconsSize} /> Bernardo Stein
+              <MdPersonPinCircle className={s.icon} size={iconsSize} /> Bernardo
+              Stein
             </p>
           </li>
           <li>
@@ -46,6 +64,6 @@ export const PersonalInfo = ():JSX.Element => {
           </li>
         </ul>
       </div>
-    </article>
+    </motion.article>
   );
 };

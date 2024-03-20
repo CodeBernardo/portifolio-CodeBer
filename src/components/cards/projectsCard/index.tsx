@@ -4,7 +4,8 @@ import s from "./index.module.scss";
 
 export const ProjectsSection = (): JSX.Element => {
   return (
-    <section className={s.projects_section}>
+    <section className={s.projects_section} id={"projects_section"}>
+      <div className="page_center" id="projects_Section"></div>
       <div className={s.projects_content}>
         <div className={s.content_info}>
           <h2 className="title2">PROJECTS</h2>
@@ -16,13 +17,13 @@ export const ProjectsSection = (): JSX.Element => {
           </p>
           <button className="title4">Todos os projetos</button>
         </div>
-          <ul>
-            {backEndProjects.map((project, i) => (
-              <li key={i}>
-                <ProjectCard project={project} type={"BACK END"} />
-              </li>
-            ))}
-          </ul>
+        <ul>
+          {backEndProjects.map((project, i) => (
+            <li key={i}>
+              <ProjectCard project={project} type={"BACK END"} />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

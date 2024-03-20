@@ -1,15 +1,27 @@
+import { stagger, useAnimate, useInView } from "framer-motion";
 import { educationList } from "../../../../../data";
 import { MdSchool } from "../../../../icons";
 import { QualificationCard } from "../qualificationCard";
-import s from "./index.module.scss"
+import s from "./index.module.scss";
 
 export const EducationList = (): JSX.Element => {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope);
+  const staggeredItens = stagger(0.035);
+
+  isInView &&
+    animate(
+      "li",
+      { opacity: [0, 1], y: [20, 0] },
+      { duration: 0.2, delay: staggeredItens },
+    );
+
   return (
     <div className={s.education_container}>
       <h3 className="title3">
-        <MdSchool size={27} className={s.icon}/> Education
+        <MdSchool size={27} className={s.icon} /> Education
       </h3>
-      <ul>
+      <ul ref={scope}>
         {educationList.map((course, i) => (
           <li key={i}>
             <QualificationCard qualification={course} />

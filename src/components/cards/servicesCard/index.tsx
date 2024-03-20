@@ -4,7 +4,8 @@ import s from "./index.module.scss"
 
 export const ServicesCard = (): JSX.Element => {
   return (
-    <section className={s.services_section}>
+    <section className={s.services_section} id="sevices_section">
+      <div className="page_center" id="services_Section"></div>
       <h2 className="title2">SERVICES</h2>
       <div className={s.services_container}>
         <FrontEndServiceCard />
