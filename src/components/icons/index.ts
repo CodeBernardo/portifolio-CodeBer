@@ -5,6 +5,8 @@ import {
   MdSchool,
   MdWork,
   MdKeyboardArrowDown,
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
 } from "react-icons/md";
 import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
 import {
@@ -35,9 +37,15 @@ import {
   SiPython,
   SiJest,
   SiDocker,
+  SiAxios,
+  SiDotenv,
+  SiJsonwebtokens,
+  SiLetsencrypt,
+  SiZod,
 } from "react-icons/si";
 import { TbWorldShare } from "react-icons/tb";
 import { GrDocumentDownload } from "react-icons/gr";
+import { PiSyringeFill } from "react-icons/pi";
 
 
 
@@ -77,4 +85,12 @@ export {
   GrDocumentDownload,
   MdKeyboardArrowDown,
   BiLogoPostgresql,
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
+  SiDotenv,
+  SiJsonwebtokens,
+  SiLetsencrypt,
+  SiZod,
+  SiAxios,
+  PiSyringeFill,
 };

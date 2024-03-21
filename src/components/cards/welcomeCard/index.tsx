@@ -1,12 +1,24 @@
 import { FaLinkedin, GrDocumentDownload, SiGithub } from "../../icons";
 import welcome_img from "../../../assets/images/OIG4.nBa.XCU_fE-removebg-preview.png";
 import s from "./index.module.scss";
+import { motion } from "framer-motion";
 
 export const WelcomeCard = (): JSX.Element => {
   return (
     <>
       <section className={s.welcome_section} id="welcome_Section">
-        <div className={s.welcome_container}>
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.4,
+            stiffness: 200,
+            delay: 0.3
+          }}
+          className={s.welcome_container}
+        >
           <div className={s.welcome_text_container}>
             <p className={`title4 medium ${s.stack_text}`}>
               DESENVOLVEDOR FULL STACK
@@ -34,8 +46,20 @@ export const WelcomeCard = (): JSX.Element => {
               <SiGithub size={22} />
             </button>
           </div>
-        </div>
-        <img src={welcome_img} alt={`welcome image`} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.4,
+            stiffness: 200,
+            delay: 0.3
+          }}
+        >
+          <img src={welcome_img} alt={`welcome image`} />
+        </motion.div>
       </section>
     </>
   );
