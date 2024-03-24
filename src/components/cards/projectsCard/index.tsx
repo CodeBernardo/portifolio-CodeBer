@@ -72,57 +72,71 @@ export const ProjectsSection = (): JSX.Element => {
   };
 
   return (
-    <section className={s.projects_section} id={"projects_section"} ref={scope}>
-      <div className={s.projects_content}>
-        <div id="projectsContent_container" className={s.content_info}>
-          <h2 className="title2">PROJETOS</h2>
-          <p className="title4 height2">
-            Navegue por uma seleção de projetos recentes, abrangendo desde o
-            desenvolvimento de back-end até o front-end e o desenvolvimento
-            full-stack. Para visualizar mais, deslize o card ao lado ou clique
-            em "Todos os projetos" abaixo.
-          </p>
-          <button className="title4">Todos os projetos</button>
-        </div>
-        <ul id="projectsList_container">
-          <AnimatePresence initial={false} custom={direction} mode="popLayout">
-            <motion.li
-              key={page}
+    <AnimatePresence mode="popLayout">
+      <motion.section
+        key={"projectspage"}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className={s.projects_section}
+        id={"projects_section"}
+        ref={scope}
+      >
+        <div className={s.projects_content}>
+          <div id="projectsContent_container" className={s.content_info}>
+            <h2 className="title2">PROJETOS</h2>
+            <p className="title4 height2">
+              Navegue por uma seleção de projetos recentes, abrangendo desde o
+              desenvolvimento de back-end até o front-end e o desenvolvimento
+              full-stack. Para visualizar mais, deslize o card ao lado ou clique
+              em "Todos os projetos" abaixo.
+            </p>
+            <button className="title4">Todos os projetos</button>
+          </div>
+          <ul id="projectsList_container">
+            <AnimatePresence
+              initial={false}
               custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 120, damping: 12 },
-                opacity: { duration: 0.2 },
-              }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
+              mode="popLayout"
             >
-              <ProjectCard
-                project={backEndProjects[projectIndex]}
-                type={"BACK END"}
-              />
-            </motion.li>
-          </AnimatePresence>
-          <div className={`${s.next}`} onClick={() => paginate(1)}>
-            <MdKeyboardArrowRight size={22} />
-          </div>
-          <div className={`${s.prev}`} onClick={() => paginate(-1)}>
-            <MdKeyboardArrowLeft size={22} />
-          </div>
-        </ul>
-      </div>
-    </section>
+              <motion.li
+                key={page}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 120, damping: 12 },
+                  opacity: { duration: 0.2 },
+                }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x);
+                  if (swipe < -swipeConfidenceThreshold) {
+                    paginate(1);
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    paginate(-1);
+                  }
+                }}
+              >
+                <ProjectCard
+                  project={backEndProjects[projectIndex]}
+                  type={"BACK END"}
+                />
+              </motion.li>
+            </AnimatePresence>
+            <div className={`${s.next}`} onClick={() => paginate(1)}>
+              <MdKeyboardArrowRight size={22} />
+            </div>
+            <div className={`${s.prev}`} onClick={() => paginate(-1)}>
+              <MdKeyboardArrowLeft size={22} />
+            </div>
+          </ul>
+        </div>
+      </motion.section>
+    </AnimatePresence>
   );
 };

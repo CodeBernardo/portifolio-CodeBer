@@ -1,21 +1,12 @@
-import { useEffect, useState } from "react";
-import s from "./index.module.scss";
 import { motion } from "framer-motion";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { NavContext } from "../../../providers";
+import s from "./index.module.scss";
 
 export const HeaderNav = (): JSX.Element => {
-  const [page, setPage] = useState(
-    sessionStorage.getItem("@currPage:") || "home",
-  );
-
-  useEffect(() => {
-    sessionStorage.setItem("@currPage:", page);
-  }, [page]);
-
-  const handlePageNavigation = (page: string): void => {
-    setPage(page);
-    window.scrollTo({top: 0, behavior: "smooth"});
-  };
+  
+  const { page, handlePageNavigation }  = useContext(NavContext);
 
   return (
     <nav className={s.nav_container}>
@@ -34,7 +25,9 @@ export const HeaderNav = (): JSX.Element => {
         </li>
         <li className="text2 regular">
           <Link to={"/projects"}>
-            <button onClick={() => handlePageNavigation("projects")}>Projetos</button>
+            <button onClick={() => handlePageNavigation("projects")}>
+              Projetos
+            </button>
             {page === "projects" && (
               <motion.div
                 className={s.selected}
@@ -46,7 +39,9 @@ export const HeaderNav = (): JSX.Element => {
         </li>
         <li className="text2 regular">
           <Link to={"/contact"}>
-            <button onClick={() => handlePageNavigation("contact")}>Contato</button>
+            <button onClick={() => handlePageNavigation("contact")}>
+              Contato
+            </button>
             {page === "contact" && (
               <motion.div
                 className={s.selected}
