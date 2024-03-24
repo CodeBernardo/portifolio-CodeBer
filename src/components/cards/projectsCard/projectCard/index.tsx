@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Project } from "../../../../interfaces";
 import { SiGithub, TbWorldShare } from "../../../icons";
 import s from "./index.module.scss";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 interface ProjectCardProps {
   project: Project;
   type: string;
@@ -40,13 +41,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             animate={{ scale: [0, 1] }}
             className={s.buttons_container}
           >
-            <button>
-              <SiGithub size={32} />
-            </button>
-            {project.deploy && (
+            <Link to={project.github}>
               <button>
-                <TbWorldShare size={32} />
+                <SiGithub size={32} />
               </button>
+            </Link>
+            {project.deploy && (
+              <Link to={project.deploy}>
+                <button>
+                  <TbWorldShare size={32} />
+                </button>
+              </Link>
             )}
           </motion.div>
         )}
@@ -59,10 +64,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <h2 className={`title3`}>{project.name}</h2>
         {!displayTechs && (
           <>
-            <motion.p
-              animate={{ scale: [0.8, 1] }}
-              className={`text1 medium height`}
-            >
+            <motion.p className={`text1 medium height3`}>
               {project.description}
             </motion.p>
           </>

@@ -53,7 +53,7 @@ export const PersonalInfo = (): JSX.Element => {
           <li>
             <p className="text1">
               <MdEmail className={s.icon} size={iconsSize} />
-              stein.bernardo@proton.me
+              dev.bernardo@proton.me
             </p>
           </li>
           <li>

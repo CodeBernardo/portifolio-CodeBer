@@ -75,12 +75,12 @@ export const ProjectsSection = (): JSX.Element => {
     <section className={s.projects_section} id={"projects_section"} ref={scope}>
       <div className={s.projects_content}>
         <div id="projectsContent_container" className={s.content_info}>
-          <h2 className="title2">PROJECTS</h2>
+          <h2 className="title2">PROJETOS</h2>
           <p className="title4 height2">
             Navegue por uma seleção de projetos recentes, abrangendo desde o
             desenvolvimento de back-end até o front-end e o desenvolvimento
-            full-stack. Para visualizar mais, deslize o card ao lado ou clique em "Todos os
-            projetos" abaixo.
+            full-stack. Para visualizar mais, deslize o card ao lado ou clique
+            em "Todos os projetos" abaixo.
           </p>
           <button className="title4">Todos os projetos</button>
         </div>
@@ -102,7 +102,6 @@ export const ProjectsSection = (): JSX.Element => {
               dragElastic={1}
               onDragEnd={(e, { offset, velocity }) => {
                 const swipe = swipePower(offset.x, velocity.x);
-
                 if (swipe < -swipeConfidenceThreshold) {
                   paginate(1);
                 } else if (swipe > swipeConfidenceThreshold) {

@@ -1,0 +1,47 @@
+@use "../../../styles/abstracts/box" as *;
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  color: var(--text-color-1);
+
+  input, textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid var(--title-color-2);
+    background-color: #7870721a;
+    color: var(--text-color-1);
+    font-family: var(--font-family-1);
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  input {
+    height: 2.1875rem;
+    padding: 0 0.5rem;
+  }
+  
+  textarea {
+    padding: 0.5rem;
+    height: 6.25rem;
+    resize: none;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem ;
+    input {
+      flex-grow: 1;
+    }
+  }
+  button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+  }
+}

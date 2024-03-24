@@ -31,19 +31,23 @@ import {
   SiZod,
 } from "../../components/icons";
 import { SiPostgresql } from "react-icons/si";
+import "../../styles/abstracts/_icons.scss"
 const iconsSize = 30
+
 export const frontEndProjects: Project[] = [
   {
     name: "Social Media",
+    type: "FRONT END",
     deploy: "https://codebernardo.github.io/Rede_social-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Rede_social-CodeBernardo",
     preview: socialMediaImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [<SiJavascript size={iconsSize}/>, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
     description:
       "Um pequeno projeto simulando algumas funcionalidades de uma rede social",
   },
   {
     name: "Fashion Store",
+    type: "FRONT END",
     deploy: "https://fashion-store-lime.vercel.app/",
     github: "https://github.com/joaolucasgusmao/fashion-store",
     preview: fashionStoreImg,
@@ -61,6 +65,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Kenzie hub",
+    type: "FRONT END",
     deploy: "https://kenzie-hub-code-bernardo.vercel.app/",
     github: "https://github.com/CodeBernardo/kenzie-hub-CodeBernardo",
     preview: kenziHubImg,
@@ -77,6 +82,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Hamburgueria",
+    type: "FRONT END",
     deploy: "https://hamburgueria-kenzie-code-bernardo.vercel.app/",
     github: "https://github.com/CodeBernardo/hamburgueria-Kenzie-CodeBernardo",
     preview: hamburgueriaImg,
@@ -92,6 +98,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Nu Kenzie",
+    type: "FRONT END",
     deploy: "https://nu-kenzie-code-bernardo.vercel.app/",
     github: "https://github.com/CodeBernardo/Nu-kenzie-CodeBernardo",
     preview: nuKenzieImg,
@@ -101,6 +108,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Portifólio",
+    type: "FRONT END",
     deploy: "https://portifolio-m3-code-bernardo.vercel.app/",
     github: "https://github.com/CodeBernardo/Portifolio-m3-CodeBernardo",
     preview: portifolioImg,
@@ -110,6 +118,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Sound fly",
+    type: "FRONT END",
     deploy: "https://codebernardo.github.io/Sound_fly-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Sound_fly-CodeBernardo",
     preview: soundFlyImg,
@@ -119,6 +128,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Pet Info",
+    type: "FRONT END",
     deploy: "https://codebernardo.github.io/Pet-info-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Control-Finance-CodeBernardo",
     preview: petInfoImg,
@@ -128,6 +138,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Control Finance",
+    type: "FRONT END",
     deploy: "https://codebernardo.github.io/Control-Finance-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Pet-info-CodeBernardo",
     preview: controlFinanceImg,
@@ -137,6 +148,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Git Search",
+    type: "FRONT END",
     deploy: "https://codebernardo.github.io/git-Search-Base-codebernardo/",
     github: "https://github.com/CodeBernardo/git-Search-Base-codebernardo",
     preview: gitSearchImg,
@@ -146,6 +158,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Todo List",
+    type: "FRONT END",
     deploy: "https://codebernardo.github.io/lista-de-tarefas-CodeBernardo/",
     github: "https://github.com/CodeBernardo/lista-de-tarefas-CodeBernardo",
     preview: todoListImg,
@@ -155,6 +168,7 @@ export const frontEndProjects: Project[] = [
   },
   {
     name: "Catalogo Geek",
+    type: "FRONT END",
     deploy: "https://codebernardo.github.io/Catalogo-Geek-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Catalogo-Geek-CodeBernardo",
     preview: catalogoGeekImg,
@@ -167,6 +181,7 @@ export const frontEndProjects: Project[] = [
 export const backEndProjects: Project[] = [
   {
     name: "Task Control API",
+    type: "BACK END",
     github: "https://github.com/CodeBernardo/task_control_api_Code_Bernardo",
     preview: backEndImg,
     techs: [
@@ -184,6 +199,7 @@ export const backEndProjects: Project[] = [
   },
   {
     name: "Cars API",
+    type: "BACK END",
     github: "https://github.com/CodeBernardo/Cars-api-CodeBernardo",
     preview: backEndImg,
     techs: [
@@ -202,6 +218,7 @@ export const backEndProjects: Project[] = [
   },
   {
     name: "Book API",
+    type: "BACK END",
     github: "https://github.com/CodeBernardo/Book-API-CodeBernardo",
     preview: backEndImg,
     techs: [
@@ -210,10 +227,11 @@ export const backEndProjects: Project[] = [
       <SiExpress size={iconsSize} />,
     ],
     description:
-      "Uma API RESTful de controle de uma livraria, com o objetivo de implementar o CRUD completo de cadastro de livros.",
+      "Uma REST API de controle de uma livraria, com o objetivo de implementar o CRUD completo de cadastro de livros.",
   },
   {
     name: "Book db",
+    type: "BACK END",
     github: "https://github.com/CodeBernardo/books-db-CodeBernardo",
     preview: backEndImg,
     techs: [<SiPostgresql size={iconsSize} />, <SiExpress size={iconsSize} />],
@@ -221,6 +239,7 @@ export const backEndProjects: Project[] = [
   },
   {
     name: "SQL CRUD",
+    type: "BACK END",
     github: "https://github.com/CodeBernardo/CRUD-CodeBernardo",
     preview: backEndImg,
     techs: [<SiPostgresql size={iconsSize} />],

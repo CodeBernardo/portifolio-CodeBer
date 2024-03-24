@@ -1,12 +1,13 @@
 import { FaLinkedin, GrDocumentDownload, SiGithub } from "../../icons";
-import welcome_img from "../../../assets/images/OIG4.nBa.XCU_fE-removebg-preview.png";
+import welcome_img from "../../../assets/images/welcome-img.png";
 import s from "./index.module.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const WelcomeCard = (): JSX.Element => {
   return (
     <>
-      <section className={s.welcome_section} id="welcome_Section">
+      <section className={s.welcome_section} id="welcome_section">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -15,7 +16,7 @@ export const WelcomeCard = (): JSX.Element => {
             bounce: 0.2,
             duration: 0.4,
             stiffness: 200,
-            delay: 0.3
+            delay: 0.2,
           }}
           className={s.welcome_container}
         >
@@ -33,17 +34,19 @@ export const WelcomeCard = (): JSX.Element => {
             </p>
           </div>
           <div className={s.buttons_container}>
-            <button className="text1">Contato</button>
-            <button className="text1">
+            <button className="title4">Contato</button>
+            <button className="title4">
               <GrDocumentDownload /> Download CV
             </button>
           </div>
           <div className={s.socialIcons_container}>
+            <Link to={"https://github.com/CodeBernardo"}>
+              <button>
+                <SiGithub size={22} />
+              </button>
+            </Link>
             <button>
               <FaLinkedin size={22} />
-            </button>
-            <button>
-              <SiGithub size={22} />
             </button>
           </div>
         </motion.div>
@@ -55,7 +58,7 @@ export const WelcomeCard = (): JSX.Element => {
             bounce: 0.2,
             duration: 0.4,
             stiffness: 200,
-            delay: 0.3
+            delay: 0.2,
           }}
         >
           <img src={welcome_img} alt={`welcome image`} />

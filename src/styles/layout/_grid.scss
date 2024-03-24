@@ -1,14 +1,15 @@
 @use "../abstracts/box" as *;
 
 .content_section {
-  height: 100vh;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  min-height: 100vh;
   width: 80%;
   margin: 0rem auto;
   margin-bottom: 2rem;
 
   .arrow_down {
+    position: relative;
+    bottom: 1.25rem;
     justify-self: center;
     margin-top: 3rem;
     color: var(--title-color-2);
@@ -25,7 +26,6 @@
   background-color: var(--bg-color-2);
   border-radius: $radius-3;
 }
-
 
 @keyframes bounce {
   0% {

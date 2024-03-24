@@ -8,20 +8,20 @@ import {
 import { MdKeyboardArrowDown } from "../../components/icons";
 
 export const HomePage = (): JSX.Element => {
-  
   const [nextSection, setNextSection] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
     nextSection?.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [nextSection]);
 
-  const handleContentScroll = (id: string) => {
-    const section = document.getElementById(id);
-    setNextSection(section);
+  const handleContentScroll = async (id: string) => {
+    await setNextSection(null);
+    const newSection = document.getElementById(id);
+    setNextSection(newSection);
   };
 
   return (
-    <>
+    <div>
       <div className="content_section">
         <WelcomeCard />
         <MdKeyboardArrowDown
@@ -54,6 +54,6 @@ export const HomePage = (): JSX.Element => {
           onClick={() => handleContentScroll("footer")}
         />
       </div>
-    </>
+    </div>
   );
 };

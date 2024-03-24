@@ -1,5 +1,5 @@
 import { AboutNav } from "../../nav";
-import aboutImg from "../../../assets/images/OIG4__1_-removebg-preview.png";
+import aboutImg from "../../../assets/images/about-img.png";
 import { PersonalInfo } from "./personal";
 import { Qualifications } from "./qualification";
 import { SkillsList } from "./skills";
@@ -32,7 +32,7 @@ export const AboutCard = () => {
 
   return (
     <section className={s.second_section} id="about_section" ref={scope}>
-      <h2 className="title2">ABOUT</h2>
+      <h2 className="title2">SOBRE MIM</h2>
       <div className={s.about_container}>
         <div id="img_container">
           <img src={aboutImg} alt="About image" />

@@ -1,0 +1,43 @@
+@use "../../styles/abstracts/box" as *;
+
+.contact_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 50%;
+  margin-top: 12%;
+
+  img {
+    height: 34.375rem;
+  }
+
+  h1 {
+    color: var(--title-color-2);
+  }
+
+  p {
+    color: var(--text-color-3);
+  }
+
+  .contactForm_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .contact_info {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      color: var(--text-color-4);
+
+      span {
+        color: var(--icon-color);
+      }
+    }
+  }
+
+  .contactImg_container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

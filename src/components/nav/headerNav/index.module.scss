@@ -1,4 +1,4 @@
-
+@use "../../../styles/abstracts/box" as *;
 .nav_container {
   min-width: fit-content;
 
@@ -6,7 +6,22 @@
     display: flex;
     gap: 1.5rem;
     li {
+      position: relative;
       color: var(--white-fixed);
+      button {
+        position: relative;
+        z-index: 1;
+        background-color: transparent;
+      }
     }
+  }
+
+  .selected {
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  width: 100%;
+  border-radius: $radius-3;
+  border-bottom: 4px solid var(--title-color-2);
   }
 }
