@@ -2,11 +2,15 @@ import { backEndProjects } from "../../../data";
 import { ProjectCard } from "./projectCard";
 import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
 import { wrap } from "popmotion";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import s from "./index.module.scss";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "../../icons";
+import { NavContext } from "../../../providers";
+import { Link } from "react-router-dom";
 
 export const ProjectsSection = (): JSX.Element => {
+  const { handlePageNavigation } = useContext(NavContext);
+
   const [scope, animate] = useAnimate();
   const [alreadyRender, setAlreadyRender] = useState(false);
   const isInView = useInView(scope);
@@ -91,7 +95,14 @@ export const ProjectsSection = (): JSX.Element => {
               full-stack. Para visualizar mais, deslize o card ao lado ou clique
               em "Todos os projetos" abaixo.
             </p>
-            <button className="title4">Todos os projetos</button>
+            <Link to={"/projects"}>
+              <button
+                className="title4"
+                onClick={() => handlePageNavigation("projects")}
+              >
+                Todos os projetos
+              </button>
+            </Link>
           </div>
           <ul id="projectsList_container">
             <AnimatePresence
