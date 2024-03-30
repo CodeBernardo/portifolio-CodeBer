@@ -5,9 +5,11 @@
   ul {
     display: flex;
     gap: 1.5rem;
+
     li {
       position: relative;
       color: var(--white-fixed);
+
       button {
         position: relative;
         z-index: 1;
@@ -17,11 +19,11 @@
   }
 
   .selected {
-  position: absolute;
-  top: 1.25rem;
-  left: 0;
-  width: 100%;
-  border-radius: $radius-3;
-  border-bottom: 4px solid var(--title-color-2);
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+    width: 100%;
+    border-radius: $radius-3;
+    border-bottom: 4px solid var(--title-color-2);
   }
 }

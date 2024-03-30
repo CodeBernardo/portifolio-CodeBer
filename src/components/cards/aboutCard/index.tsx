@@ -34,7 +34,7 @@ export const AboutCard = () => {
     <section className={s.second_section} id="about_section" ref={scope}>
       <h2 className="title2">SOBRE MIM</h2>
       <div className={s.about_container}>
-        <div id="img_container">
+        <div id="img_container" className={s.img_container}>
           <img src={aboutImg} alt="About image" />
         </div>
         <div id={"aboutContents_container"}>

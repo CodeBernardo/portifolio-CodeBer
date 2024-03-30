@@ -13,11 +13,11 @@
 
     ul {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin-top: 2rem;
+      grid-template-columns: 1fr;
+      margin-top: 1rem;
 
       li {
-        height: 3.5rem;
+        height: 3rem;
 
         p {
           display: flex;

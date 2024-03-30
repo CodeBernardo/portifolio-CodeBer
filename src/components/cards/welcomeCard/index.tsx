@@ -41,7 +41,7 @@ export const WelcomeCard = (): JSX.Element => {
                 Olá, meu nome é <br /> Bernardo Stein,
               </h1>
 
-              <p className={`title4 ${s.welcome_bio}`}>
+              <p className={`title4 height2 ${s.welcome_bio}`}>
                 sou um desenvolvedor full stack especializado em construir
                 experiências digitais excepcionais.
               </p>

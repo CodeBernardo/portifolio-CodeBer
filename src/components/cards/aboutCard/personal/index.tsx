@@ -29,7 +29,7 @@ export const PersonalInfo = (): JSX.Element => {
       className={s.personalInfo_container}
     >
       <h2 className="title2">Estou em busca de uma oportunidade.</h2>
-      <p className="title4 height1">
+      <p className="title4 height2">
         Olá! Sou Bernardo, um apaixonado por tecnologia e inovação. Atualmente,
         estou me aprofundando no mundo do desenvolvimento, me esforçando para
         expandir meus conhecimentos e habilidades de programação. Meu objetivo é

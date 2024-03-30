@@ -1,13 +1,13 @@
 $fontFamily-1: "Roboto", sans-serif;
 $fontFamily-2: "Fira Code", monospace;
 
-$fontSize-1: 2.75rem;
-$fontSize-2: 2.375rem;
-$fontSize-3: 1.5rem;
-$fontSize-4: 1.25rem;
-$fontSize-5: 1rem;
-$fontSize-6: .875rem;
-$fontSize-7: .75rem;
+$fontSize-1: clamp(2rem, 5vh, 2.75rem);
+$fontSize-2: clamp(1.85rem, 5vh, 2.375rem);
+$fontSize-3: clamp(1rem, 5vh, 1.5rem);
+$fontSize-4: clamp(0.93rem, 5vh, 1.25rem);
+$fontSize-5: clamp(0.75rem, 5vh, 1rem);
+$fontSize-6: clamp(0.5rem, 5vh, 0.875rem);
+$fontSize-7: clamp(0.35rem, 5vh, 0.75rem);
 
 $fontWeight-700: 700;
 $fontWeight-600: 600;
@@ -15,6 +15,6 @@ $fontWeight-500: 500;
 $fontWeight-400: 400;
 $fontWeight-300: 300;
 
-$lineHeight-1: 2.1875rem;
-$lineHeight-2: 1.5625rem;
-$lineHeight-3: 20px;
+$lineHeight-1: clamp(2rem, 5vh, 2.1875rem);
+$lineHeight-2: clamp(1.2rem, 5vh, 1.5625rem);
+$lineHeight-3: clamp(1rem, 5vh, 1.25rem);

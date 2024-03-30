@@ -11,7 +11,7 @@ export const PageFooter = (): JSX.Element => {
   return (
     <footer className={s.footer_container} id={"footer"}>
       <div className={s.ending_message}>
-        <h2 className="title2">
+        <h2 className="title2 height1">
           Pronto para trazer suas ideias ao mundo real? <br />
           Estou aqui para ajudar.
         </h2>

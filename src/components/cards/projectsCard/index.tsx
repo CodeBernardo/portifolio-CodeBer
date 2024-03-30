@@ -92,7 +92,7 @@ export const ProjectsSection = (): JSX.Element => {
             <p className="title4 height2">
               Navegue por uma seleção de projetos recentes, abrangendo desde o
               desenvolvimento de back-end até o front-end e o desenvolvimento
-              full-stack. Para visualizar mais, deslize o card ao lado ou clique
+              full-stack. Para visualizar mais, deslize o card ou clique
               em "Todos os projetos" abaixo.
             </p>
             <Link to={"/projects"}>
