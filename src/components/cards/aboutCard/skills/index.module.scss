@@ -15,11 +15,19 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(8, 1fr);
+    }
   }
 
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+  }
+
+  @media (min-width: 1440px) {
+    text-align: start;
   }
 }

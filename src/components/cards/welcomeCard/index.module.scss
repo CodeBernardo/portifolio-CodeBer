@@ -10,8 +10,16 @@
 
   img {
     transform: scaleX(-1);
-    height: 37.5rem;
+    height: 25rem;
     display: none;
+
+    @media (min-width: 1024px) {
+      display: inline;
+    }
+
+    @media (min-width: 1440px) {
+      height: 35rem;
+    }
   }
 }
 
@@ -32,6 +40,14 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    text-align: start;
+  }
 }
 
 .stack_text {
@@ -51,6 +67,14 @@
   width: 100%;
   gap: 1rem;
 
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: start;
+  }
+
   button {
     height: 3rem;
     padding: 0 1rem;
@@ -61,6 +85,15 @@
 }
 
 .socialIcons_container {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: start;
+  }
+
   button {
     background-color: transparent;
     color: var(--text-color-3);

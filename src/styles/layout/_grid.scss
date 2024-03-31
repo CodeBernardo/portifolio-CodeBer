@@ -6,10 +6,11 @@
   width: 90%;
   margin: 0 auto;
   margin-bottom: 2rem;
+  max-width: 90rem;
 
   .arrow_down {
     position: relative;
-    bottom: 1.25rem;
+    bottom: 2.25rem;
     justify-self: center;
     margin-top: 3rem;
     color: var(--title-color-2);

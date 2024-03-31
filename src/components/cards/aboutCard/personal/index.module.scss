@@ -10,11 +10,14 @@
   }
 
   div {
-
     ul {
       display: grid;
       grid-template-columns: 1fr;
       margin-top: 1rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
 
       li {
         height: 3rem;
@@ -25,8 +28,8 @@
           column-gap: 0.8rem;
           color: var(--text-color-4);
 
-          .icon{
-            color: var(--icon-color)
+          .icon {
+            color: var(--icon-color);
           }
         }
       }

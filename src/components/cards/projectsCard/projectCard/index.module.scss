@@ -6,8 +6,7 @@
   border: 1px solid var(--title-color-2);
   border-radius: $radius-3;
   position: relative;
-  min-height: 31.875rem;
-  // max-width: 21rem;
+  min-height: 32rem;
   width: 18rem;
   background-color: var(--bg-color-4);
 
@@ -85,5 +84,13 @@
         max-height: 1.875rem;
       }
     }
+  }
+
+  @media (min-width: 1024px) {
+    width: 20rem;
+  }
+
+  @media (min-width: 1440px) {
+    width: 23rem;
   }
 }

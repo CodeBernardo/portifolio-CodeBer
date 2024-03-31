@@ -15,4 +15,12 @@
     flex-direction: column;
     row-gap: 1.5rem;
   }
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 0;
+  }
 }
