@@ -7,9 +7,10 @@ import {
 } from "../../components";
 import { MdKeyboardArrowDown } from "../../components/icons";
 import { NavContext } from "../../providers";
+import { NavContextType } from "../../providers/navContext";
 
 export const HomePage = (): JSX.Element => {
-  const {handlePageNavigation } = useContext(NavContext);
+  const {handlePageNavigation } = useContext(NavContext) as NavContextType;
 
   useEffect(() => {
     handlePageNavigation(window.location.pathname)

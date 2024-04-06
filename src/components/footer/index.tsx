@@ -4,9 +4,10 @@ import s from "./index.module.scss";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { NavContext } from "../../providers";
+import { NavContextType } from "../../providers/navContext";
 
 export const PageFooter = (): JSX.Element => {
-  const { handlePageNavigation } = useContext(NavContext);
+  const { handlePageNavigation } = useContext(NavContext) as NavContextType;
 
   return (
     <footer className={s.footer_container} id={"footer"}>

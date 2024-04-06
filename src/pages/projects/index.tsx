@@ -5,13 +5,14 @@ import { ProjectCard } from "../../components/cards/projectsCard/projectCard";
 import { stagger, useAnimate } from "framer-motion";
 import s from "./index.module.scss";
 import { NavContext } from "../../providers";
+import { NavContextType } from '../../providers/navContext/index';
 
 export const ProjectsPage = (): JSX.Element => {
   const [projectsList, setProjectsList] = useState("all");
   const allProjects = [...backEndProjects, ...frontEndProjects];
   const [scope, animate] = useAnimate();
 
-  const { handlePageNavigation } = useContext(NavContext);
+  const { handlePageNavigation } = useContext(NavContext) as NavContextType;
 
   useEffect(() => {
     handlePageNavigation(window.location.pathname);

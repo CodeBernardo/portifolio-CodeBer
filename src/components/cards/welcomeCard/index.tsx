@@ -5,10 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { NavContext } from "../../../providers";
+import { NavContextType } from "../../../providers/navContext";
 
 export const WelcomeCard = (): JSX.Element => {
   const navigate = useNavigate();
-  const { handlePageNavigation } = useContext(NavContext);
+  const { handlePageNavigation } = useContext(NavContext) as NavContextType;
 
   return (
     <>

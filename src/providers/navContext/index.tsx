@@ -4,12 +4,12 @@ type NavProviderProps = {
   children: ReactNode;
 };
 
-type NavContext = {
+export type NavContextType = {
   page: string;
   handlePageNavigation: (page: string) => void;
 };
 
-export const NavContext = createContext<NavContext | undefined>(undefined);
+export const NavContext = createContext<NavContextType | undefined>(undefined);
 
 export const NavProvider: React.FC<NavProviderProps> = ({
   children,

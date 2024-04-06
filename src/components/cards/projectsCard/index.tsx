@@ -2,13 +2,15 @@ import { backEndProjects } from "../../../data";
 import { ProjectCard } from "./projectCard";
 import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
 import { wrap } from "popmotion";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import s from "./index.module.scss";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "../../icons";
 import { Link } from "react-router-dom";
+import { NavContext } from "../../../providers";
+import { NavContextType } from "../../../providers/navContext";
 
 export const ProjectsSection = (): JSX.Element => {
-
+  const { handlePageNavigation } = useContext(NavContext) as NavContextType;
 
   const [scope, animate] = useAnimate();
   const [alreadyRender, setAlreadyRender] = useState(false);
@@ -91,8 +93,8 @@ export const ProjectsSection = (): JSX.Element => {
             <p className="title4 height2">
               Navegue por uma seleção de projetos recentes, abrangendo desde o
               desenvolvimento de back-end até o front-end e o desenvolvimento
-              full-stack. Para visualizar mais, deslize o card ou clique
-              em "Todos os projetos" abaixo.
+              full-stack. Para visualizar mais, deslize o card ou clique em
+              "Todos os projetos" abaixo.
             </p>
             <Link to={"/projects"}>
               <button
@@ -123,7 +125,7 @@ export const ProjectsSection = (): JSX.Element => {
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
+                onDragEnd={(_, { offset, velocity }) => {
                   const swipe = swipePower(offset.x, velocity.x);
                   if (swipe < -swipeConfidenceThreshold) {
                     paginate(1);

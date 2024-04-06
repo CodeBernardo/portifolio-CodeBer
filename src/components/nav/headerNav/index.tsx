@@ -3,10 +3,11 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavContext } from "../../../providers";
 import s from "./index.module.scss";
+import { NavContextType } from "../../../providers/navContext";
 
 export const HeaderNav = (): JSX.Element => {
   
-  const { page, handlePageNavigation }  = useContext(NavContext);
+  const { page, handlePageNavigation }  = useContext(NavContext) as NavContextType;
 
   return (
     <nav className={s.nav_container}>
