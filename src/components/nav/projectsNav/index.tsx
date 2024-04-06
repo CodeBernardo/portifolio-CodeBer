@@ -15,7 +15,7 @@ export const ProjectsNav: React.FC<ProjectsNavProps> = ({
       <ul className={s.projectsNav_container}>
         <li>
           <button
-            className="text1 medium"
+            className="text1"
             onClick={() => setProjectsList("all")}
           >
             <span>Todos os projetos</span>
@@ -29,7 +29,7 @@ export const ProjectsNav: React.FC<ProjectsNavProps> = ({
         </li>
         <li>
           <button
-            className="text1 medium"
+            className="text1"
             onClick={() => setProjectsList("backEnd")}
           >
             <span>Back End</span>
@@ -43,7 +43,7 @@ export const ProjectsNav: React.FC<ProjectsNavProps> = ({
         </li>
         <li>
           <button
-            className="text1 medium"
+            className="text1"
             onClick={() => setProjectsList("frontEnd")}
           >
             <span>Front End</span>
