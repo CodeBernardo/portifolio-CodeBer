@@ -2,14 +2,13 @@ import { backEndProjects } from "../../../data";
 import { ProjectCard } from "./projectCard";
 import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
 import { wrap } from "popmotion";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import s from "./index.module.scss";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "../../icons";
-import { NavContext } from "../../../providers";
 import { Link } from "react-router-dom";
 
 export const ProjectsSection = (): JSX.Element => {
-  const { handlePageNavigation } = useContext(NavContext);
+
 
   const [scope, animate] = useAnimate();
   const [alreadyRender, setAlreadyRender] = useState(false);

@@ -3,10 +3,18 @@ import { MdEmail, MdLocationPin } from "../../components/icons";
 import contactImg from "../../assets/images/contact-img-2.png";
 import s from "./index.module.scss";
 import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
+import { useEffect, useContext } from "react";
+import { NavContext } from "../../providers";
 
 export const ContactPage = (): JSX.Element => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
+
+  const { handlePageNavigation } = useContext(NavContext);
+
+  useEffect(() => {
+    handlePageNavigation(window.location.pathname);
+  });
 
   if (isInView) {
     animate(

@@ -1,14 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProjectsNav } from "../../components/nav";
 import { backEndProjects, frontEndProjects } from "../../data";
 import { ProjectCard } from "../../components/cards/projectsCard/projectCard";
 import { stagger, useAnimate } from "framer-motion";
 import s from "./index.module.scss";
+import { NavContext } from "../../providers";
 
 export const ProjectsPage = (): JSX.Element => {
   const [projectsList, setProjectsList] = useState("all");
   const allProjects = [...backEndProjects, ...frontEndProjects];
   const [scope, animate] = useAnimate();
+
+  const { handlePageNavigation } = useContext(NavContext);
+
+  useEffect(() => {
+    handlePageNavigation(window.location.pathname);
+  });
 
   useEffect(() => {
     animate(

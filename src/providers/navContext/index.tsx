@@ -15,11 +15,11 @@ export const NavProvider: React.FC<NavProviderProps> = ({
   children,
 }): JSX.Element => {
   const [page, setPage] = useState(
-    sessionStorage.getItem("@currPage:") || "home",
+    sessionStorage.getItem("@currPage:") || "/home",
   );
 
   useEffect(() => {
-    sessionStorage.setItem("@currPage:", page);
+    sessionStorage.setItem("@currPage:", window.location.pathname);
   }, [page]);
 
   const handlePageNavigation = (page: string): void => {

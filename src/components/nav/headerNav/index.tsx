@@ -12,9 +12,9 @@ export const HeaderNav = (): JSX.Element => {
     <nav className={s.nav_container}>
       <ul>
         <li className="text2 regular">
-          <Link to={"/"}>
-            <button onClick={() => handlePageNavigation("home")}>Home</button>
-            {page === "home" && (
+          <Link to={"/home"}>
+            <button onClick={() => handlePageNavigation("/home")}>Home</button>
+            {page === "/home" && (
               <motion.div
                 className={s.selected}
                 layoutId="selectedPage"
@@ -25,10 +25,10 @@ export const HeaderNav = (): JSX.Element => {
         </li>
         <li className="text2 regular">
           <Link to={"/projects"}>
-            <button onClick={() => handlePageNavigation("projects")}>
+            <button onClick={() => handlePageNavigation("/projects")}>
               Projetos
             </button>
-            {page === "projects" && (
+            {page === "/projects" && (
               <motion.div
                 className={s.selected}
                 layoutId="selectedPage"
@@ -39,10 +39,10 @@ export const HeaderNav = (): JSX.Element => {
         </li>
         <li className="text2 regular">
           <Link to={"/contact"}>
-            <button onClick={() => handlePageNavigation("contact")}>
+            <button onClick={() => handlePageNavigation("/contact")}>
               Contato
             </button>
-            {page === "contact" && (
+            {page === "/contact" && (
               <motion.div
                 className={s.selected}
                 layoutId="selectedPage"

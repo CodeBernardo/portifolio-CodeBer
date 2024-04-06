@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   AboutCard,
   ProjectsSection,
@@ -6,8 +6,15 @@ import {
   WelcomeCard,
 } from "../../components";
 import { MdKeyboardArrowDown } from "../../components/icons";
+import { NavContext } from "../../providers";
 
 export const HomePage = (): JSX.Element => {
+  const {handlePageNavigation } = useContext(NavContext);
+
+  useEffect(() => {
+    handlePageNavigation(window.location.pathname)
+  })
+
   const [nextSection, setNextSection] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
