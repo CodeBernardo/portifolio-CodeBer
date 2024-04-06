@@ -2,10 +2,14 @@
 
 .contact_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   height: 50%;
-  margin-top: 12%;
+  margin-top: 9.375rem;
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   img {
     height: 34.375rem;
@@ -37,7 +41,11 @@
   }
 
   .contactImg_container {
-    display: flex;
-    justify-content: flex-end;
+    display: none;
+    
+    @media (min-width: 1440px) {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
