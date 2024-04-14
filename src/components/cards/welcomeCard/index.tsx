@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import welcome_img from "../../../assets/images/welcome-img.png";
 import { NavContext } from "../../../providers";
 import { NavContextType } from "../../../providers/navContext";
-import { FaLinkedin, GrDocumentDownload, SiGithub } from "../../icons";
+import { FaLinkedin, SiGithub } from "../../icons";
 import s from "./index.module.scss";
 
 export const WelcomeCard = (): JSX.Element => {
