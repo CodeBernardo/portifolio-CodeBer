@@ -1,11 +1,11 @@
-import { FaLinkedin, GrDocumentDownload, SiGithub } from "../../icons";
-import welcome_img from "../../../assets/images/welcome-img.png";
-import s from "./index.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import welcome_img from "../../../assets/images/welcome-img.png";
 import { NavContext } from "../../../providers";
 import { NavContextType } from "../../../providers/navContext";
+import { FaLinkedin, GrDocumentDownload, SiGithub } from "../../icons";
+import s from "./index.module.scss";
 
 export const WelcomeCard = (): JSX.Element => {
   const navigate = useNavigate();
@@ -58,9 +58,9 @@ export const WelcomeCard = (): JSX.Element => {
               >
                 Contato
               </motion.button>
-              <motion.button whileTap={{ scale: 0.9 }} className="title4">
+              {/* <motion.button whileTap={{ scale: 0.9 }} className="title4">
                 <GrDocumentDownload /> Download CV
-              </motion.button>
+              </motion.button> */}
             </div>
             <div className={s.socialIcons_container}>
               <Link to={"https://github.com/CodeBernardo"}>

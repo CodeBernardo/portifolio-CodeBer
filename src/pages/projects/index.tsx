@@ -1,11 +1,11 @@
+import { stagger, useAnimate } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
+import { ProjectCard } from "../../components/cards/projectsCard/projectCard";
 import { ProjectsNav } from "../../components/nav";
 import { backEndProjects, frontEndProjects } from "../../data";
-import { ProjectCard } from "../../components/cards/projectsCard/projectCard";
-import { stagger, useAnimate } from "framer-motion";
-import s from "./index.module.scss";
 import { NavContext } from "../../providers";
-import { NavContextType } from '../../providers/navContext/index';
+import { NavContextType } from "../../providers/navContext/index";
+import s from "./index.module.scss";
 
 export const ProjectsPage = (): JSX.Element => {
   const [projectsList, setProjectsList] = useState("all");

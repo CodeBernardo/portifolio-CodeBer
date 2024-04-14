@@ -4,7 +4,7 @@ export const educationList: Qualification[] = [
   {
     location: "Kenzie Academy Brasil",
     stack: "Back end developer",
-    period: "out/2023 - atual",
+    period: "out/2023 - mai/2024",
   },
   {
     location: "Kenzie Academy Brasil",
