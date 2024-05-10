@@ -272,7 +272,7 @@ export const backEndProjects: Project[] = [
       "Uma REST API de controle de uma livraria, com o objetivo de implementar o CRUD completo de cadastro de livros.",
   },
   {
-    name: "Book db",
+    name: "Book db - CRUD",
     type: "BACK END",
     github: "https://github.com/CodeBernardo/books-db-CodeBernardo",
     preview: backEndImg,
@@ -280,11 +280,15 @@ export const backEndProjects: Project[] = [
     description: "CRUD realizado através de queries diretamente no PostgreSQL.",
   },
   {
-    name: "SQL CRUD",
+    name: "CRUD",
     type: "BACK END",
     github: "https://github.com/CodeBernardo/CRUD-CodeBernardo",
     preview: backEndImg,
-    techs: [<SiPostgresql size={iconsSize} />],
+    techs: [
+      <SiPostgresql size={iconsSize} />,
+      <SiTypescript size={iconsSize} />,
+      <SiExpress size={iconsSize} />,
+    ],
     description:
       "Meu primeiro contato com o back-end, uma implementação de um CRUD completo utilizando programação orientada a objetos.",
   },
