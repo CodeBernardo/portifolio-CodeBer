@@ -1,4 +1,4 @@
-import { SiPostgresql, SiSwagger } from "react-icons/si";
+import { SiPostgresql, SiRender, SiSwagger } from "react-icons/si";
 import socialMediaImg from "../../assets/images/Social-media-prev.png";
 import backEndImg from "../../assets/images/back-end-development-1.jpg";
 import catalogoGeekImg from "../../assets/images/catalogo-geek-prev.png";
@@ -32,11 +32,11 @@ import {
   SiSass,
   SiSqlite,
   SiTypescript,
-  SiZod
+  SiZod,
 } from "../../components/icons";
 import { Project } from "../../interfaces";
 import "../../styles/abstracts/_icons.scss";
-const iconsSize = 30
+const iconsSize = 30;
 
 export const frontEndProjects: Project[] = [
   {
@@ -45,7 +45,11 @@ export const frontEndProjects: Project[] = [
     deploy: "https://codebernardo.github.io/Rede_social-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Rede_social-CodeBernardo",
     preview: socialMediaImg,
-    techs: [<SiJavascript size={iconsSize}/>, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiCss3 size={iconsSize} />,
+    ],
     description:
       "Um pequeno projeto simulando algumas funcionalidades de uma rede social",
   },
@@ -106,7 +110,12 @@ export const frontEndProjects: Project[] = [
     deploy: "https://nu-kenzie-code-bernardo.vercel.app/",
     github: "https://github.com/CodeBernardo/Nu-kenzie-CodeBernardo",
     preview: nuKenzieImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiSass size={iconsSize} />, <SiReact size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiSass size={iconsSize} />,
+      <SiReact size={iconsSize} />,
+    ],
     description:
       "Uma aplicação de controle financeiro com o intuito de ampliar os conhecimentos sbore estados e componentização de elementos react",
   },
@@ -116,7 +125,12 @@ export const frontEndProjects: Project[] = [
     deploy: "https://portifolio-m3-code-bernardo.vercel.app/",
     github: "https://github.com/CodeBernardo/Portifolio-m3-CodeBernardo",
     preview: portifolioImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiSass size={iconsSize} />, <SiReact size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiSass size={iconsSize} />,
+      <SiReact size={iconsSize} />,
+    ],
     description:
       "Meu primeiro contato com React, uma aplicação que simula um exemplo de portifólio",
   },
@@ -126,7 +140,11 @@ export const frontEndProjects: Project[] = [
     deploy: "https://codebernardo.github.io/Sound_fly-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Sound_fly-CodeBernardo",
     preview: soundFlyImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiCss3 size={iconsSize} />,
+    ],
     description:
       "Um projecto que simula um e-comerce de música com o objetivo de reforçar os conhecimentos em manipulação de DOM",
   },
@@ -136,7 +154,11 @@ export const frontEndProjects: Project[] = [
     deploy: "https://codebernardo.github.io/Pet-info-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Control-Finance-CodeBernardo",
     preview: petInfoImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiCss3 size={iconsSize} />,
+    ],
     description:
       "Um projeto em formato de blog sobre animais, cujo o intuito era praticar a manipulação de DOM e o uso do fetch API",
   },
@@ -146,7 +168,11 @@ export const frontEndProjects: Project[] = [
     deploy: "https://codebernardo.github.io/Control-Finance-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Pet-info-CodeBernardo",
     preview: controlFinanceImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiCss3 size={iconsSize} />,
+    ],
     description:
       "Uma aplicaçao de controle financeiro cujo o objeto era ampliar conhecimentos sobre manipulação de DOM e a persistência de dados no navegador",
   },
@@ -156,7 +182,11 @@ export const frontEndProjects: Project[] = [
     deploy: "https://codebernardo.github.io/git-Search-Base-codebernardo/",
     github: "https://github.com/CodeBernardo/git-Search-Base-codebernardo",
     preview: gitSearchImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiCss3 size={iconsSize} />,
+    ],
     description:
       "Uma aplicação que busca usuários do Github e retorna algumas informacões tal como nome de usuário, avatar e repositórios. O projeto tem como objetivo ampliar conhecimentos sobre a utilização de API's",
   },
@@ -166,7 +196,11 @@ export const frontEndProjects: Project[] = [
     deploy: "https://codebernardo.github.io/lista-de-tarefas-CodeBernardo/",
     github: "https://github.com/CodeBernardo/lista-de-tarefas-CodeBernardo",
     preview: todoListImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiCss3 size={iconsSize} />,
+    ],
     description:
       "Um projeto de todo list cujo com a finalidade de aperfeiçoar conhecimentos sobre manipulação de DOM",
   },
@@ -176,7 +210,11 @@ export const frontEndProjects: Project[] = [
     deploy: "https://codebernardo.github.io/Catalogo-Geek-CodeBernardo/",
     github: "https://github.com/CodeBernardo/Catalogo-Geek-CodeBernardo",
     preview: catalogoGeekImg,
-    techs: [<SiJavascript size={iconsSize} />, <SiHtml5 size={iconsSize} />, <SiCss3 size={iconsSize} />],
+    techs: [
+      <SiJavascript size={iconsSize} />,
+      <SiHtml5 size={iconsSize} />,
+      <SiCss3 size={iconsSize} />,
+    ],
     description:
       "Um projeto de um catálogo cujo com a finalidade de aperfeiçoar conhecimentos sobre manipulação de DOM e responsividade",
   },
@@ -289,8 +327,9 @@ export const backEndProjects: Project[] = [
       <SiDjango size={iconsSize} />,
       <SiPytest size={iconsSize} />,
       <SiSqlite size={iconsSize} />,
-      <SiJsonwebtokens size={iconsSize} />,
       <SiSwagger size={iconsSize} />,
+      <SiRender size={iconsSize} />,
+      <SiJsonwebtokens size={iconsSize} />,
     ],
     description:
       "Desenvolvido como projeto final para fins educacionais, Kanvas é uma plataforma de gerenciamento de aprendizagem, projetada para facilitar o acesso e a gestão de conteúdos, cursos e relações entre estudantes e professores.",
