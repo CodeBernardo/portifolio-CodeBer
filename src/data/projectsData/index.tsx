@@ -1,21 +1,22 @@
-import { Project } from "../../interfaces";
+import { SiPostgresql, SiSwagger } from "react-icons/si";
 import socialMediaImg from "../../assets/images/Social-media-prev.png";
+import backEndImg from "../../assets/images/back-end-development-1.jpg";
+import catalogoGeekImg from "../../assets/images/catalogo-geek-prev.png";
+import controlFinanceImg from "../../assets/images/control-finance-prev.png";
 import fashionStoreImg from "../../assets/images/fashion-store-prev.png";
-import kenziHubImg from "../../assets/images/kenzie-hub-prev.png";
+import gitSearchImg from "../../assets/images/git-search-prev.png";
 import hamburgueriaImg from "../../assets/images/hamburgueria-prev.png";
+import kenziHubImg from "../../assets/images/kenzie-hub-prev.png";
 import nuKenzieImg from "../../assets/images/nu-kenzie-prev.png";
+import petInfoImg from "../../assets/images/pet-info-prev.png";
 import portifolioImg from "../../assets/images/portifolio-prev.png";
 import soundFlyImg from "../../assets/images/sound-fly-prev.png";
-import petInfoImg from "../../assets/images/pet-info-prev.png";
-import controlFinanceImg from "../../assets/images/control-finance-prev.png";
-import gitSearchImg from "../../assets/images/git-search-prev.png";
 import todoListImg from "../../assets/images/task-list-prev.png";
-import catalogoGeekImg from "../../assets/images/catalogo-geek-prev.png";
-import backEndImg from "../../assets/images/back-end-development-1.jpg";
 import {
   PiSyringeFill,
   SiAxios,
   SiCss3,
+  SiDjango,
   SiDotenv,
   SiExpress,
   SiFramer,
@@ -25,13 +26,16 @@ import {
   SiJsonwebtokens,
   SiLetsencrypt,
   SiPrisma,
+  SiPytest,
+  SiPython,
   SiReact,
   SiSass,
+  SiSqlite,
   SiTypescript,
-  SiZod,
+  SiZod
 } from "../../components/icons";
-import { SiPostgresql } from "react-icons/si";
-import "../../styles/abstracts/_icons.scss"
+import { Project } from "../../interfaces";
+import "../../styles/abstracts/_icons.scss";
 const iconsSize = 30
 
 export const frontEndProjects: Project[] = [
@@ -245,5 +249,50 @@ export const backEndProjects: Project[] = [
     techs: [<SiPostgresql size={iconsSize} />],
     description:
       "Meu primeiro contato com o back-end, uma implementação de um CRUD completo utilizando programação orientada a objetos.",
+  },
+  {
+    name: "Kopa do Mundo",
+    type: "BACK END",
+    github: "https://github.com/CodeBernardo/kopa-do-mundo-CodeBernardo",
+    preview: backEndImg,
+    techs: [
+      <SiPython size={iconsSize} />,
+      <SiDjango size={iconsSize} />,
+      <SiPytest size={iconsSize} />,
+      <SiSqlite size={iconsSize} />,
+    ],
+    description:
+      "Um projeto de estudo que explora o conceitos do back end com foco na utilizaçao de Python, Django e Django Rest Framework.",
+  },
+  {
+    name: "Kenzie Buster",
+    type: "BACK END",
+    github: "https://github.com/CodeBernardo/kenzie-buster-CodeBernardo",
+    preview: backEndImg,
+    techs: [
+      <SiPython size={iconsSize} />,
+      <SiDjango size={iconsSize} />,
+      <SiPytest size={iconsSize} />,
+      <SiSqlite size={iconsSize} />,
+      <SiJsonwebtokens size={iconsSize} />,
+    ],
+    description:
+      "Uma solução projetada para organizar e gerenciar dados relacionados a filmes e pedidos de forma eficiente e acessível.",
+  },
+  {
+    name: "Kanvas",
+    type: "BACK END",
+    github: "https://github.com/CodeBernardo/projeto-final-kanvas-CodeBernardo",
+    preview: backEndImg,
+    techs: [
+      <SiPython size={iconsSize} />,
+      <SiDjango size={iconsSize} />,
+      <SiPytest size={iconsSize} />,
+      <SiSqlite size={iconsSize} />,
+      <SiJsonwebtokens size={iconsSize} />,
+      <SiSwagger size={iconsSize} />,
+    ],
+    description:
+      "Desenvolvido como projeto final para fins educacionais, Kanvas é uma plataforma de gerenciamento de aprendizagem, projetada para facilitar o acesso e a gestão de conteúdos, cursos e relações entre estudantes e professores.",
   },
 ];

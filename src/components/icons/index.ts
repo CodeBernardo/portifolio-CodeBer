@@ -42,6 +42,11 @@ import {
   SiJsonwebtokens,
   SiLetsencrypt,
   SiZod,
+  SiDjango,
+  SiSqlite,
+  SiPytest,
+  SiSwagger,
+  SiRender,
 } from "react-icons/si";
 import { TbWorldShare } from "react-icons/tb";
 import { GrDocumentDownload } from "react-icons/gr";
@@ -93,4 +98,9 @@ export {
   SiZod,
   SiAxios,
   PiSyringeFill,
+  SiDjango,
+  SiSqlite,
+  SiPytest,
+  SiSwagger,
+  SiRender,
 };
