@@ -1,4 +1,4 @@
-This workspace is a React project using TypeScript and Vite as the build tool. It serves as a portfolio website showcasing various projects and qualifications. Let's break down the details:
+Personal portfolio website showcasing various projects and qualifications. Let's break down the details:
 
 ### Project Description:
 - **Type:** Website
