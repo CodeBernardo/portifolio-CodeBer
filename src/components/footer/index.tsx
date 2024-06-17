@@ -5,16 +5,18 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { NavContext } from "../../providers";
 import { NavContextType } from "../../providers/navContext";
+import { useLanguageContext } from "../../providers/langContext";
 
 export const PageFooter = (): JSX.Element => {
   const { handlePageNavigation } = useContext(NavContext) as NavContextType;
+  const {t} = useLanguageContext()
 
   return (
     <footer className={s.footer_container} id={"footer"}>
       <div className={s.ending_message}>
         <h2 className="title2 height1">
-          Pronto para trazer suas ideias ao mundo real? <br />
-          Estou aqui para ajudar.
+          {t("home.footer.question1")} <br />
+          {t("home.footer.question2")}
         </h2>
         <Link to={"/contact"}>
           <motion.button
@@ -22,7 +24,7 @@ export const PageFooter = (): JSX.Element => {
             onClick={() => handlePageNavigation("contact")}
             className="title3"
           >
-            Contato
+            {t("buttons.contact")}
           </motion.button>
         </Link>
       </div>
@@ -38,7 +40,10 @@ export const PageFooter = (): JSX.Element => {
           </button>
         </Link>
       </div>
-      <p>Direitos autorais © Bernardo Stein. Todos os direitos reservados</p>
+      <p>
+        {t("home.footer.copywrite1")} © Bernardo Stein.{" "}
+        {t("home.footer.copywrite2")}
+      </p>
     </footer>
   );
 };

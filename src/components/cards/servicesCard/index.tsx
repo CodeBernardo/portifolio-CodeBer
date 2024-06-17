@@ -1,13 +1,15 @@
 import { useAnimate, useInView } from "framer-motion";
+import { useState } from "react";
+import { useLanguageContext } from "../../../providers/langContext";
 import { BackEndServiceCard } from "./backEndDev";
 import { FrontEndServiceCard } from "./frontEndDev";
 import s from "./index.module.scss";
-import { useState } from "react";
 
 export const ServicesCard = (): JSX.Element => {
   const [scope, animate] = useAnimate();
   const [alreadyRender, setAlreadyRender] = useState(false);
   const isInView = useInView(scope);
+  const {t} = useLanguageContext()
 
   if (isInView && !alreadyRender) {
     setAlreadyRender(true);
@@ -38,7 +40,7 @@ export const ServicesCard = (): JSX.Element => {
   return (
     <section className={s.services_section} id="sevices_section" ref={scope}>
       <div className="page_center" id="services_Section"></div>
-      <h2 className="title2">SERVIÇOS</h2>
+      <h2 className="title2">{t("home.section3.sectionTitle")}</h2>
       <div className={s.services_container}>
         <div id="frontEnd_container">
           <FrontEndServiceCard />

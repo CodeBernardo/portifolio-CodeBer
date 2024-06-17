@@ -36,6 +36,7 @@ import {
 } from "../../components/icons";
 import { Project } from "../../interfaces";
 import "../../styles/abstracts/_icons.scss";
+
 const iconsSize = 30;
 
 export const frontEndProjects: Project[] = [
@@ -50,8 +51,10 @@ export const frontEndProjects: Project[] = [
       <SiHtml5 size={iconsSize} />,
       <SiCss3 size={iconsSize} />,
     ],
-    description:
-      "Um pequeno projeto simulando algumas funcionalidades de uma rede social",
+    description: {
+      ptBR: "Um pequeno projeto simulando algumas funcionalidades de uma rede social",
+      enUS: "A small project simulating some features of a social network",
+    },
   },
   {
     name: "Fashion Store",
@@ -68,8 +71,10 @@ export const frontEndProjects: Project[] = [
       <SiReact size={iconsSize} />,
       <SiFramer size={iconsSize} />,
     ],
-    description:
-      "Um projeto realizado em grupo de um e-comerce de roupas e utilizando uma API externa, neste projeto praticamos alguns conceitos de trabalho em equipe e git flow",
+    description: {
+      ptBR: "Um projeto realizado em grupo de um e-comerce de roupas e utilizando uma API externa, neste projeto praticamos alguns conceitos de trabalho em equipe e git flow",
+      enUS: "A group project of a clothing e-commerce using an external API. In this project, we practiced some teamwork and git flow concepts",
+    },
   },
   {
     name: "Kenzie hub",
@@ -85,8 +90,10 @@ export const frontEndProjects: Project[] = [
       <SiAxios size={iconsSize} />,
       <SiReact size={iconsSize} />,
     ],
-    description:
-      "Um projeto de estudos sobre validação de formulários e CRUD completo de criação de usuários, utilizando uma API externa",
+    description: {
+      ptBR: "Um projeto de estudos sobre validação de formulários e CRUD completo de criação de usuários, utilizando uma API externa",
+      enUS: "A study project on form validation and complete CRUD for user creation using an external API",
+    },
   },
   {
     name: "Hamburgueria",
@@ -101,8 +108,10 @@ export const frontEndProjects: Project[] = [
       <SiAxios size={iconsSize} />,
       <SiReact size={iconsSize} />,
     ],
-    description:
-      "Uma aplicaçao de um e-comerce de alimentos com a intenção de ampliar os conhecimentos em react utilizando uma API externa",
+    description: {
+      ptBR: "Uma aplicaçao de um e-comerce de alimentos com a intenção de ampliar os conhecimentos em react utilizando uma API externa",
+      enUS: "An e-commerce food application aiming to expand knowledge in React using an external API",
+    },
   },
   {
     name: "Nu Kenzie",
@@ -116,8 +125,10 @@ export const frontEndProjects: Project[] = [
       <SiSass size={iconsSize} />,
       <SiReact size={iconsSize} />,
     ],
-    description:
-      "Uma aplicação de controle financeiro com o intuito de ampliar os conhecimentos sbore estados e componentização de elementos react",
+    description: {
+      ptBR: "Uma aplicação de controle financeiro com o intuito de ampliar os conhecimentos sobre estados e componentização de elementos react",
+      enUS: "A financial control application aiming to expand knowledge on state management and componentization in React",
+    },
   },
   {
     name: "Portifólio",
@@ -131,8 +142,10 @@ export const frontEndProjects: Project[] = [
       <SiSass size={iconsSize} />,
       <SiReact size={iconsSize} />,
     ],
-    description:
-      "Meu primeiro contato com React, uma aplicação que simula um exemplo de portifólio",
+    description: {
+      ptBR: "Meu primeiro contato com React, uma aplicação que simula um exemplo de portifólio",
+      enUS: "My first contact with React, an application simulating a portfolio example",
+    },
   },
   {
     name: "Sound fly",
@@ -145,8 +158,10 @@ export const frontEndProjects: Project[] = [
       <SiHtml5 size={iconsSize} />,
       <SiCss3 size={iconsSize} />,
     ],
-    description:
-      "Um projecto que simula um e-comerce de música com o objetivo de reforçar os conhecimentos em manipulação de DOM",
+    description: {
+      ptBR: "Um projeto que simula um e-comerce de música com o objetivo de reforçar os conhecimentos em manipulação de DOM",
+      enUS: "A project simulating a music e-commerce aiming to reinforce knowledge in DOM manipulation",
+    },
   },
   {
     name: "Pet Info",
@@ -159,8 +174,10 @@ export const frontEndProjects: Project[] = [
       <SiHtml5 size={iconsSize} />,
       <SiCss3 size={iconsSize} />,
     ],
-    description:
-      "Um projeto em formato de blog sobre animais, cujo o intuito era praticar a manipulação de DOM e o uso do fetch API",
+    description: {
+      ptBR: "Um projeto em formato de blog sobre animais, cujo o intuito era praticar a manipulação de DOM e o uso do fetch API",
+      enUS: "A blog-format project about animals, aiming to practice DOM manipulation and the use of fetch API",
+    },
   },
   {
     name: "Control Finance",
@@ -173,8 +190,10 @@ export const frontEndProjects: Project[] = [
       <SiHtml5 size={iconsSize} />,
       <SiCss3 size={iconsSize} />,
     ],
-    description:
-      "Uma aplicaçao de controle financeiro cujo o objeto era ampliar conhecimentos sobre manipulação de DOM e a persistência de dados no navegador",
+    description: {
+      ptBR: "Uma aplicação de controle financeiro cujo o objeto era ampliar conhecimentos sobre manipulação de DOM e a persistência de dados no navegador",
+      enUS: "A financial control application aiming to expand knowledge on DOM manipulation and data persistence in the browser",
+    },
   },
   {
     name: "Git Search",
@@ -187,8 +206,10 @@ export const frontEndProjects: Project[] = [
       <SiHtml5 size={iconsSize} />,
       <SiCss3 size={iconsSize} />,
     ],
-    description:
-      "Uma aplicação que busca usuários do Github e retorna algumas informacões tal como nome de usuário, avatar e repositórios. O projeto tem como objetivo ampliar conhecimentos sobre a utilização de API's",
+    description: {
+      ptBR: "Uma aplicação que busca usuários do Github e retorna algumas informacões tal como nome de usuário, avatar e repositórios. O projeto tem como objetivo ampliar conhecimentos sobre a utilização de API's",
+      enUS: "An application that searches for GitHub users and returns some information such as username, avatar, and repositories. The project aims to expand knowledge on the use of APIs",
+    },
   },
   {
     name: "Todo List",
@@ -201,8 +222,10 @@ export const frontEndProjects: Project[] = [
       <SiHtml5 size={iconsSize} />,
       <SiCss3 size={iconsSize} />,
     ],
-    description:
-      "Um projeto de todo list cujo com a finalidade de aperfeiçoar conhecimentos sobre manipulação de DOM",
+    description: {
+      ptBR: "Um projeto de todo list com a finalidade de aperfeiçoar conhecimentos sobre manipulação de DOM",
+      enUS: "A to-do list project aiming to improve knowledge on DOM manipulation",
+    },
   },
   {
     name: "Catalogo Geek",
@@ -215,8 +238,10 @@ export const frontEndProjects: Project[] = [
       <SiHtml5 size={iconsSize} />,
       <SiCss3 size={iconsSize} />,
     ],
-    description:
-      "Um projeto de um catálogo cujo com a finalidade de aperfeiçoar conhecimentos sobre manipulação de DOM e responsividade",
+    description: {
+      ptBR: "Um projeto de um catálogo cujo com a finalidade de aperfeiçoar conhecimentos sobre manipulação de DOM e responsividade",
+      enUS: "A catalog project aiming to improve knowledge on DOM manipulation and responsiveness",
+    },
   },
 ];
 
@@ -236,8 +261,10 @@ export const backEndProjects: Project[] = [
       <SiLetsencrypt size={iconsSize} />,
       <SiDotenv size={iconsSize} />,
     ],
-    description:
-      "Uma REST API  de controle de uma aplicação de tarefas, com o objetivo de implementar o CRUD completo de criação de tarefas e de usuários, com validação de dados e criptografia de dados sensíveis.",
+    description: {
+      ptBR: "Uma REST API  de controle de uma aplicação de tarefas, com o objetivo de implementar o CRUD completo de criação de tarefas e de usuários, com validação de dados e criptografia de dados sensíveis.",
+      enUS: "A REST API for task management, aiming to implement a complete CRUD for task and user creation, with data validation and encryption of sensitive data.",
+    },
   },
   {
     name: "Cars API",
@@ -255,8 +282,10 @@ export const backEndProjects: Project[] = [
       <SiDotenv size={iconsSize} />,
       <SiJest size={iconsSize} />,
     ],
-    description:
-      "Um projeto criado do zero de uma REST API que controla um estoque de carros, com CRUD completo de cadastro de carros e usuários, com validação de dados e criptografia de dados sensíveis. Criação de testes unitários e de integração com Jest e documentação completa das features da API.",
+    description: {
+      ptBR: "Um projeto criado do zero de uma REST API que controla um estoque de carros, com CRUD completo de cadastro de carros e usuários, com validação de dados e criptografia de dados sensíveis. Criação de testes unitários e de integração com Jest e documentação completa das features da API.",
+      enUS: "A project created from scratch of a REST API that manages a car inventory, with complete CRUD for car and user registration, with data validation and encryption of sensitive data. Creation of unit and integration tests with Jest and full documentation of API features.",
+    },
   },
   {
     name: "Book API",
@@ -268,8 +297,10 @@ export const backEndProjects: Project[] = [
       <SiZod size={iconsSize} />,
       <SiExpress size={iconsSize} />,
     ],
-    description:
-      "Uma REST API de controle de uma livraria, com o objetivo de implementar o CRUD completo de cadastro de livros.",
+    description: {
+      ptBR: "Uma REST API de controle de uma livraria, com o objetivo de implementar o CRUD completo de cadastro de livros.",
+      enUS: "A REST API for managing a bookstore, aiming to implement a complete CRUD for book registration.",
+    },
   },
   {
     name: "Book db - CRUD",
@@ -277,7 +308,10 @@ export const backEndProjects: Project[] = [
     github: "https://github.com/CodeBernardo/books-db-CodeBernardo",
     preview: backEndImg,
     techs: [<SiPostgresql size={iconsSize} />, <SiExpress size={iconsSize} />],
-    description: "CRUD realizado através de queries diretamente no PostgreSQL.",
+    description: {
+      ptBR: "CRUD realizado através de queries diretamente no PostgreSQL.",
+      enUS: "CRUD performed through queries directly on PostgreSQL.",
+    },
   },
   {
     name: "CRUD",
@@ -289,8 +323,10 @@ export const backEndProjects: Project[] = [
       <SiTypescript size={iconsSize} />,
       <SiExpress size={iconsSize} />,
     ],
-    description:
-      "Meu primeiro contato com o back-end, uma implementação de um CRUD completo utilizando programação orientada a objetos.",
+    description: {
+      ptBR: "Meu primeiro contato com o back-end, uma implementação de um CRUD completo utilizando programação orientada a objetos.",
+      enUS: "My first contact with back-end, an implementation of a complete CRUD using object-oriented programming.",
+    },
   },
   {
     name: "Kopa do Mundo",
@@ -303,8 +339,10 @@ export const backEndProjects: Project[] = [
       <SiPytest size={iconsSize} />,
       <SiSqlite size={iconsSize} />,
     ],
-    description:
-      "Um projeto de estudo que explora o conceitos do back end com foco na utilizaçao de Python, Django e Django Rest Framework.",
+    description: {
+      ptBR: "Um projeto de estudo que explora o conceitos do back end com foco na utilizaçao de Python, Django e Django Rest Framework.",
+      enUS: "A study project exploring back-end concepts with a focus on using Python, Django, and Django Rest Framework.",
+    },
   },
   {
     name: "Kenzie Buster",
@@ -318,8 +356,10 @@ export const backEndProjects: Project[] = [
       <SiSqlite size={iconsSize} />,
       <SiJsonwebtokens size={iconsSize} />,
     ],
-    description:
-      "Uma solução projetada para organizar e gerenciar dados relacionados a filmes e pedidos de forma eficiente e acessível.",
+    description: {
+      ptBR: "Uma solução projetada para organizar e gerenciar dados relacionados a filmes e pedidos de forma eficiente e acessível.",
+      enUS: "A solution designed to organize and manage data related to movies and orders efficiently and accessibly.",
+    },
   },
   {
     name: "Kanvas",
@@ -336,7 +376,9 @@ export const backEndProjects: Project[] = [
       <SiRender size={iconsSize} />,
       <SiJsonwebtokens size={iconsSize} />,
     ],
-    description:
-      "Desenvolvido como projeto final para fins educacionais, Kanvas é uma plataforma de gerenciamento de aprendizagem, projetada para facilitar o acesso e a gestão de conteúdos, cursos e relações entre estudantes e professores.",
+    description: {
+      ptBR: "Desenvolvido como projeto final para fins educacionais, Kanvas é uma plataforma de gerenciamento de aprendizagem, projetada para facilitar o acesso e a gestão de conteúdos, cursos e relações entre estudantes e professores.",
+      enUS: "Developed as a final project for educational purposes, Kanvas is a learning management platform designed to facilitate access and management of content, courses, and relationships between students and teachers.",
+    },
   },
 ];

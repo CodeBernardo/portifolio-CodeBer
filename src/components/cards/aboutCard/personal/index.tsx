@@ -6,12 +6,14 @@ import {
   MdSchool,
 } from "../../../icons";
 import s from "./index.module.scss";
+import { useLanguageContext } from "../../../../providers/langContext";
 
 export const PersonalInfo = (): JSX.Element => {
   const iconsSize = 26;
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
   const staggeredItens = stagger(0.035);
+  const {t} = useLanguageContext()
 
   isInView &&
     animate(
@@ -28,13 +30,9 @@ export const PersonalInfo = (): JSX.Element => {
       transition={{ duration: 0.2 }}
       className={s.personalInfo_container}
     >
-      <h2 className="title2">Estou em busca de uma oportunidade.</h2>
+      <h2 className="title2">{t("home.section2.information.copyTitle")}</h2>
       <p className="title4 height2">
-        Olá! Sou Bernardo, um apaixonado por tecnologia e inovação. Atualmente,
-        estou me aprofundando no mundo do desenvolvimento, me esforçando para
-        expandir meus conhecimentos e habilidades de programação. Meu objetivo é
-        ajudar as empresas a alcançarem seus objetivos, transformando idéias em
-        realidade com código.
+        {t("home.section2.information.copyText")}
       </p>
       <div>
         <ul ref={scope}>
@@ -47,7 +45,7 @@ export const PersonalInfo = (): JSX.Element => {
           <li>
             <p className="text1">
               <MdSchool className={s.icon} size={iconsSize} />
-              Desenvolvedor Full Stack
+              {t("generics.stack")}
             </p>
           </li>
           <li>

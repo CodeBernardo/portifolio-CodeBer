@@ -3,11 +3,13 @@ import { educationList } from "../../../../../data";
 import { MdSchool } from "../../../../icons";
 import { QualificationCard } from "../qualificationCard";
 import s from "./index.module.scss";
+import { useLanguageContext } from "../../../../../providers/langContext";
 
 export const EducationList = (): JSX.Element => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
   const staggeredItens = stagger(0.035);
+  const {t} = useLanguageContext()
 
   isInView &&
     animate(
@@ -19,7 +21,7 @@ export const EducationList = (): JSX.Element => {
   return (
     <div className={s.education_container}>
       <h3 className="title3">
-        <MdSchool size={27} className={s.icon} /> Education
+        <MdSchool size={27} className={s.icon} /> {t("home.section2.qualification.education")}
       </h3>
       <ul ref={scope}>
         {educationList.map((course, i) => (

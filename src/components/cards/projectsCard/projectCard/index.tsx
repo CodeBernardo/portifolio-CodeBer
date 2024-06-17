@@ -1,17 +1,20 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Project } from "../../../../interfaces";
 import { SiGithub, TbWorldShare } from "../../../icons";
 import s from "./index.module.scss";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+
 interface ProjectCardProps {
   project: Project;
   type: string;
+  language: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   project,
   type,
+  language,
 }): JSX.Element => {
   const [displayButtons, setDisplayButtons] = useState(false);
   const [displayTechs, setDisplayTechs] = useState(false);
@@ -21,6 +24,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
   const handleTechsDisplayOn = () => setDisplayTechs(true);
   const handleTechsDisplayOff = () => setDisplayTechs(false);
+
   return (
     <div className={s.card_container}>
       <p className={`text2 medium ${s.project_type}`}>{type}</p>
@@ -65,7 +69,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {!displayTechs && (
           <>
             <motion.p className={`text1 medium height3`}>
-              {project.description}
+              {project.description[language]}
             </motion.p>
           </>
         )}

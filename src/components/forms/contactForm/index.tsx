@@ -1,9 +1,10 @@
-import { useForm } from "react-hook-form";
-import { Input, TextArea } from "../input";
-import { motion } from "framer-motion";
-import { sendMailSchema } from "../../../schemas/index.schema";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useSubmit } from "@formspree/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { useLanguageContext } from "../../../providers/langContext";
+import { sendMailSchema } from "../../../schemas/index.schema";
+import { Input, TextArea } from "../input";
 import s from "./indes.module.scss";
 
 export const ContactForm = (): JSX.Element => {
@@ -16,6 +17,8 @@ export const ContactForm = (): JSX.Element => {
     resolver: zodResolver(sendMailSchema),
   });
 
+  const { t } = useLanguageContext();
+
   const submit = useSubmit("xdoqwnzy", {
     onSuccess: () => {
       reset();
@@ -27,10 +30,10 @@ export const ContactForm = (): JSX.Element => {
       <form className={s.form_container} onSubmit={handleSubmit(submit)}>
         <div>
           <Input
-            label="Nome:"
+            label={t("contact.labels.name")}
             id="name"
             type="text"
-            placeholder="Digite seu nome..."
+            placeholder={t("contact.placeholders.name")}
             {...register("name")}
             error={errors.name}
           />
@@ -38,29 +41,29 @@ export const ContactForm = (): JSX.Element => {
             label="Email:"
             id="email"
             type="email"
-            placeholder="Digite seu email..."
+            placeholder={t("contact.placeholders.email")}
             {...register("email")}
             error={errors.email}
           />
         </div>
         <TextArea
-          label="Mensagem"
+          label={t("contact.labels.message")}
           id="message"
-          placeholder="Digite sua mensagem..."
+          placeholder={t("contact.placeholders.message")}
           error={errors.message}
           {...register("message")}
         />
         {isSubmitting ? (
-          <p>Enviando...</p>
+          <p>{t("contact.status.sending")}</p>
         ) : isSubmitSuccessful ? (
-          <p>Email enviado com sucesso ✔</p>
+          <p>{t("contact.status.success")}</p>
         ) : (
           <motion.button
             whileTap={{ scale: 0.9 }}
             type={"submit"}
             className="title4"
           >
-            Enviar
+            {t("buttons.send")}
           </motion.button>
         )}
       </form>

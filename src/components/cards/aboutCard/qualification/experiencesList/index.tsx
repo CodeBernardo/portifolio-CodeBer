@@ -3,12 +3,13 @@ import { experiencesList } from "../../../../../data";
 import { MdWork } from "../../../../icons";
 import { QualificationCard } from "../qualificationCard";
 import s from "./index.module.scss";
+import { useLanguageContext } from "../../../../../providers/langContext";
 
 export const ExperiencesList = (): JSX.Element => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
   const staggeredItens = stagger(0.035);
-
+  const {t} = useLanguageContext()
   isInView &&
     animate(
       "li",
@@ -20,7 +21,7 @@ export const ExperiencesList = (): JSX.Element => {
     <div className={s.experiences_container}>
       <h3 className="title3">
         <MdWork size={24} className={s.icon} />
-        Experience
+        {t("home.section2.qualification.experience")}
       </h3>
       <ul ref={scope}>
         {experiencesList.map((job, i) => (

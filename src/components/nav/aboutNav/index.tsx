@@ -2,6 +2,7 @@ import React from "react";
 import s from "./index.module.scss";
 import { Subject } from "../../cards/aboutCard";
 import { motion } from "framer-motion";
+import { useLanguageContext } from "../../../providers/langContext";
 
 interface AboutNavProps {
   setSubject: (subject: Subject) => void;
@@ -11,6 +12,9 @@ export const AboutNav: React.FC<AboutNavProps> = ({
   setSubject,
   subject,
 }): JSX.Element => {
+
+  const {t} = useLanguageContext()
+
   return (
     <nav>
       <ul className={s.aboutNav_container}>
@@ -19,7 +23,7 @@ export const AboutNav: React.FC<AboutNavProps> = ({
             className={"text1 medium "}
             onClick={() => setSubject("personal")}
           >
-            <span>Informações</span>
+            <span>{t("buttons.infos")}</span>
             {subject === "personal" && (
               <motion.div
                 className="selected"
@@ -34,7 +38,7 @@ export const AboutNav: React.FC<AboutNavProps> = ({
             className={"text1 medium"}
             onClick={() => setSubject("qualifications")}
           >
-            <span>Qualificações</span>
+            <span>{t("buttons.qualification")}</span>
             {subject === "qualifications" && (
               <motion.div
                 className="selected"
@@ -49,7 +53,7 @@ export const AboutNav: React.FC<AboutNavProps> = ({
             className={"text1 medium"}
             onClick={() => setSubject("skills")}
           >
-            <span>Habilidades</span>
+            <span>{t("buttons.skills")}</span>
             {subject === "skills" && (
               <motion.div
                 className="selected"

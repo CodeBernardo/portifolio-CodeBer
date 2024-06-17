@@ -2,19 +2,24 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavContext } from "../../../providers";
-import s from "./index.module.scss";
+import { useLanguageContext } from "../../../providers/langContext";
 import { NavContextType } from "../../../providers/navContext";
+import s from "./index.module.scss";
 
 export const HeaderNav = (): JSX.Element => {
-  
-  const { page, handlePageNavigation }  = useContext(NavContext) as NavContextType;
+  const { page, handlePageNavigation } = useContext(
+    NavContext,
+  ) as NavContextType;
+  const { t } = useLanguageContext();
 
   return (
     <nav className={s.nav_container}>
       <ul>
         <li className="text2 regular">
           <Link to={"/home"}>
-            <button onClick={() => handlePageNavigation("/home")}>Home</button>
+            <button onClick={() => handlePageNavigation("/home")}>
+              {t("buttons.home")}
+            </button>
             {page === "/home" && (
               <motion.div
                 className={s.selected}
@@ -27,7 +32,7 @@ export const HeaderNav = (): JSX.Element => {
         <li className="text2 regular">
           <Link to={"/projects"}>
             <button onClick={() => handlePageNavigation("/projects")}>
-              Projetos
+              {t("buttons.projects")}
             </button>
             {page === "/projects" && (
               <motion.div
@@ -41,7 +46,7 @@ export const HeaderNav = (): JSX.Element => {
         <li className="text2 regular">
           <Link to={"/contact"}>
             <button onClick={() => handlePageNavigation("/contact")}>
-              Contato
+              {t("buttons.contact")}
             </button>
             {page === "/contact" && (
               <motion.div

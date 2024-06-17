@@ -4,6 +4,8 @@ export interface Project {
   deploy?: string | undefined;
   github: string;
   techs: JSX.Element[];
-  description: string;
+  description: {
+    [key: string]: string;
+  };
   preview?: string | undefined;
 }

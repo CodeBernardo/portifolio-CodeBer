@@ -1,13 +1,14 @@
-import { backEndProjects } from "../../../data";
-import { ProjectCard } from "./projectCard";
 import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
 import { wrap } from "popmotion";
 import { useContext, useState } from "react";
-import s from "./index.module.scss";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "../../icons";
 import { Link } from "react-router-dom";
+import { backEndProjects } from "../../../data";
 import { NavContext } from "../../../providers";
+import { useLanguageContext } from "../../../providers/langContext";
 import { NavContextType } from "../../../providers/navContext";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "../../icons";
+import s from "./index.module.scss";
+import { ProjectCard } from "./projectCard";
 
 export const ProjectsSection = (): JSX.Element => {
   const { handlePageNavigation } = useContext(NavContext) as NavContextType;
@@ -15,6 +16,7 @@ export const ProjectsSection = (): JSX.Element => {
   const [scope, animate] = useAnimate();
   const [alreadyRender, setAlreadyRender] = useState(false);
   const isInView = useInView(scope);
+  const { language } = useLanguageContext();
 
   if (isInView && !alreadyRender) {
     setAlreadyRender(true);
@@ -76,6 +78,8 @@ export const ProjectsSection = (): JSX.Element => {
     setPage([page + newDirection, newDirection]);
   };
 
+  const {t} = useLanguageContext()
+
   return (
     <AnimatePresence mode="popLayout">
       <motion.section
@@ -89,19 +93,14 @@ export const ProjectsSection = (): JSX.Element => {
       >
         <div className={s.projects_content}>
           <div id="projectsContent_container" className={s.content_info}>
-            <h2 className="title2">PROJETOS</h2>
-            <p className="title4 height2">
-              Navegue por uma seleção de projetos recentes, abrangendo desde o
-              desenvolvimento de back-end até o front-end e o desenvolvimento
-              full-stack. Para visualizar mais, deslize o card ou clique em
-              "Todos os projetos" abaixo.
-            </p>
+            <h2 className="title2">{t("home.section4.sectionTitle")}</h2>
+            <p className="title4 height2">{t("home.section4.copyText")}</p>
             <Link to={"/projects"}>
               <button
                 className="title4"
                 onClick={() => handlePageNavigation("projects")}
               >
-                Todos os projetos
+                {t("buttons.allProjects")}
               </button>
             </Link>
           </div>
@@ -136,6 +135,7 @@ export const ProjectsSection = (): JSX.Element => {
               >
                 <ProjectCard
                   project={backEndProjects[projectIndex]}
+                  language={language}
                   type={"BACK END"}
                 />
               </motion.li>

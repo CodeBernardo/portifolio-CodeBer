@@ -1,0 +1,13 @@
+@use "../../styles/abstracts/colors" as *;
+
+.select {
+  background-color: transparent;
+  border: none;
+  color: $primary-500;
+  font-size: 1rem;
+  font-weight: 700;
+
+  option {
+    color: $neutral-900;
+  }
+}

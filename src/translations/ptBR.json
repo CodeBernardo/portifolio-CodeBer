@@ -1,0 +1,82 @@
+{
+  "generics": {
+    "stack": "Desenvolvedor Full Stack"
+  },
+  "home": {
+    "section1": {
+      "welcome": "Olá, meu nome é",
+      "welcomeMessage": "sou um desenvolvedor full stack especializado em construir experiências digitais excepcionais."
+    },
+    "section2": {
+      "sectionTitle": "SOBRE MIM",
+      "information": {
+        "copyTitle": "Transformo idéias em realidade",
+        "copyText": "Olá! Sou Bernardo, um entusiasta de tecnologia e inovação. Estou me dedicando a aprofundar meus conhecimentos e habilidades em desenvolvimento de software, com o objetivo de transformar ideias em realidade através do código. Minha paixão é ajudar pessoas a alcançar seus objetivos, oferecendo soluções tecnológicas eficientes e inovadoras."
+      },
+      "qualification": {
+        "title": "Minhas qualificações",
+        "education": "Educação",
+        "experience": "Experiência"
+      },
+      "skills": {
+        "title": "Meu conjunto de Habilidades",
+        "techs": "Tecnologias",
+        "softSkills": "Habilidades comportamentais",
+        "skill1": "Comunicação",
+        "skill2": "Trabalho em equipe",
+        "skill3": "Organização",
+        "skill4": "Criatiividade",
+        "skill5": "Aprendizado contínuo",
+        "skill6": "Metodologias ágeis"
+      },
+      "languages": "Idiomas",
+      "pt": "Português nativo",
+      "en": "Inglês intermediário"
+    },
+    "section3": {
+      "sectionTitle": "SERVIÇOS",
+      "stack1": "DEsenvolvedor Front-end",
+      "stack1Text": "Desenvolvo soluções completas no front-end, construindo aplicações sólidas e integradas, garantindo uma experiência de usuário excepcional.",
+      "stack2": "Desenvolvedor Back-end",
+      "stack2Text": "Minha dedicação ao desenvolvimento back-end me permitiu estabelecer fundamentos robustos para aplicações, assegurando eficiência, escalabilidade e proteção."
+    },
+    "section4": {
+      "sectionTitle": "PROJETOS",
+      "copyText": "Navegue por uma seleção de projetos recentes, abrangendo desde o desenvolvimento de back-end até o front-end e o desenvolvimento full-stack. Para visualizar mais, deslize o card ou clique em \"Todos os projetos\" abaixo."
+    },
+    "footer": {
+      "question1": "Pronto para trazer suas ideias ao mundo real?",
+      "question2": "Estou aqui para ajudar",
+      "copywrite1": "Direitos autorais",
+      "copywrite2": "Todos os direitos reservados"
+    }
+  },
+  "contact": {
+    "question": "Vamos trabalhar juntos?",
+    "copy": "Se você está procurando por alguém que possa transformar suas ideias em realidade, estou aqui para ajudar. Entre em contato e vamos fazer algo incrível juntos!",
+    "labels": {
+      "name": "Nome:",
+      "message": "Mensagem:"
+    },
+    "placeholders": {
+      "name": "Digite seu nome...",
+      "email": "Digite seu email...",
+      "message": "Digite sua mensagem..."
+    },
+    "status": {
+      "sending": "Enviando...",
+      "success": "Email enviado com sucesso ✔"
+    }
+  },
+  "buttons": {
+    "contact": "Contato",
+    "allProjects": "Todos os projetos",
+    "resume": "Baixar CV",
+    "home": "Início",
+    "projects": "Projetos",
+    "infos": "Informações",
+    "qualification": "Qualificações",
+    "skills": "Habilidades",
+    "send": "Enviar"
+  }
+}

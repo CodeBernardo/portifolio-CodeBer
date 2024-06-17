@@ -6,12 +6,14 @@ import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
 import { useEffect, useContext } from "react";
 import { NavContext } from "../../providers";
 import { NavContextType } from "../../providers/navContext";
+import { useLanguageContext } from "../../providers/langContext";
 
 export const ContactPage = (): JSX.Element => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
 
   const { handlePageNavigation } = useContext(NavContext) as NavContextType;
+  const {t} = useLanguageContext()
 
   useEffect(() => {
     handlePageNavigation(window.location.pathname);
@@ -54,11 +56,9 @@ export const ContactPage = (): JSX.Element => {
         >
           <div className={s.contact_container} ref={scope}>
             <div className={s.contactForm_container} id="contact_form">
-              <h1 className="title1">Vamos trabalhar juntos?</h1>
+              <h1 className="title1">{t("contact.question")}</h1>
               <p className="title4 height2">
-                Se você está procurando por alguém que possa transformar suas
-                ideias em realidade, estou aqui para ajudar. Entre em contato e
-                vamos fazer algo incrível juntos!
+                {t("contact.copy")}
               </p>
               <p className={`text1 ${s.contact_info}`}>
                 <span>

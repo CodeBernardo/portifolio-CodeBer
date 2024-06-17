@@ -1,0 +1,82 @@
+{
+  "generics": {
+    "stack": "Full Stack Developer"
+  },
+  "home": {
+    "section1": {
+      "welcome": "Hello, my name is",
+      "welcomeMessage": "I am a full stack developer specialized in building exceptional digital experiences."
+    },
+    "section2": {
+      "sectionTitle": "ABOUT ME",
+      "information": {
+        "copyTitle": "I Turn Ideas into Reality",
+        "copyText": "Hello! I'm Bernardo, a technology and innovation enthusiast. I am dedicated to deepening my knowledge and skills in software development, with the goal of transforming ideas into reality through code. My passion is to help people achieve their goals by offering efficient and innovative technological solutions."
+      },
+      "qualification": {
+        "title": "My Qualifications",
+        "education": "Education",
+        "experience": "Experience"
+      },
+      "skills": {
+        "title": "My Skill Set",
+        "techs": "Technologies",
+        "softSkills": "Soft Skills",
+        "skill1": "Communication",
+        "skill2": "Teamwork",
+        "skill3": "Organization",
+        "skill4": "Creativity",
+        "skill5": "Continuous Learning",
+        "skill6": "Agile Methodologies"
+      },
+      "languages": "Languages",
+      "pt": "Native Portuguese",
+      "en": "Intermediate English"
+    },
+    "section3": {
+      "sectionTitle": "SERVICES",
+      "stack1": "Front-end Developer",
+      "stack1Text": "I develop complete front-end solutions, building solid and integrated applications, ensuring an exceptional user experience.",
+      "stack2": "Back-end Developer",
+      "stack2Text": "My dedication to back-end development has allowed me to establish robust foundations for applications, ensuring efficiency, scalability, and security."
+    },
+    "section4": {
+      "sectionTitle": "PROJECTS",
+      "copyText": "Browse through a selection of recent projects, ranging from back-end to front-end and full-stack development. To see more, swipe the card or click on 'All Projects' below."
+    },
+    "footer": {
+      "question1": "Ready to bring your ideas to life?",
+      "question2": "I'm here to help",
+      "copywrite1": "Copyright",
+      "copywrite2": "All rights reserved"
+    }
+  },
+  "contact": {
+    "question": "Shall we work together?",
+    "copy": "If you are looking for someone who can turn your ideas into reality, I am here to help. Get in touch and let's make something amazing together!",
+    "labels": {
+      "name": "Name:",
+      "message": "Message:"
+    },
+    "placeholders": {
+      "name": "Enter your name...",
+      "email": "Enter your email...",
+      "message": "Enter your message..."
+    },
+    "status": {
+      "sending": "Sending...",
+      "success": "Email sent successfully ✔"
+    }
+  },
+  "buttons": {
+    "contact": "Contact",
+    "allProjects": "All Projects",
+    "resume": "Download Resume",
+    "home": "Home",
+    "projects": "Projects",
+    "infos": "Information",
+    "qualification": "Qualifications",
+    "skills": "Skills",
+    "send": "Send"
+  }
+}

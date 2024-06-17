@@ -6,10 +6,12 @@ import { SkillsList } from "./skills";
 import { useState } from "react";
 import { AnimatePresence, useAnimate, useInView } from "framer-motion";
 import s from "./index.module.scss";
+import { useLanguageContext } from "../../../providers/langContext";
 
 export type Subject = "personal" | "qualifications" | "skills";
 
 export const AboutCard = () => {
+  const {t} = useLanguageContext()
   const [subject, setSubject] = useState<Subject>("personal");
   const [alreadyRender, setAlreadyRender] = useState(false);
   const [scope, animate] = useAnimate();
@@ -32,7 +34,7 @@ export const AboutCard = () => {
 
   return (
     <section className={s.second_section} id="about_section" ref={scope}>
-      <h2 className="title2">SOBRE MIM</h2>
+      <h2 className="title2">{t("home.section2.sectionTitle")}</h2>
       <div className={s.about_container}>
         <div id="img_container" className={s.img_container}>
           <img src={aboutImg} alt="About image" />

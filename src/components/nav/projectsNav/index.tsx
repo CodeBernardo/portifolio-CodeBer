@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import s from "./index.module.scss";
+import { useLanguageContext } from "../../../providers/langContext";
 
 interface ProjectsNavProps {
   setProjectsList: (setProjecList: "all" | "backEnd" | "frontEnd") => void;
@@ -10,15 +11,13 @@ export const ProjectsNav: React.FC<ProjectsNavProps> = ({
   projectList,
   setProjectsList,
 }): JSX.Element => {
+  const { t } = useLanguageContext()
   return (
     <>
       <ul className={s.projectsNav_container}>
         <li>
-          <button
-            className="text1"
-            onClick={() => setProjectsList("all")}
-          >
-            <span>Todos os projetos</span>
+          <button className="text1" onClick={() => setProjectsList("all")}>
+            <span>{t("buttons.allProjects")}</span>
           </button>
           {projectList === "all" && (
             <motion.div
@@ -28,10 +27,7 @@ export const ProjectsNav: React.FC<ProjectsNavProps> = ({
           )}
         </li>
         <li>
-          <button
-            className="text1"
-            onClick={() => setProjectsList("backEnd")}
-          >
+          <button className="text1" onClick={() => setProjectsList("backEnd")}>
             <span>Back End</span>
           </button>
           {projectList === "backEnd" && (
@@ -42,12 +38,8 @@ export const ProjectsNav: React.FC<ProjectsNavProps> = ({
           )}
         </li>
         <li>
-          <button
-            className="text1"
-            onClick={() => setProjectsList("frontEnd")}
-          >
+          <button className="text1" onClick={() => setProjectsList("frontEnd")}>
             <span>Front End</span>
-            
           </button>
           {projectList === "frontEnd" && (
             <motion.div

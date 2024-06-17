@@ -3,13 +3,15 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import welcome_img from "../../../assets/images/welcome-img.png";
 import { NavContext } from "../../../providers";
+import { useLanguageContext } from "../../../providers/langContext";
 import { NavContextType } from "../../../providers/navContext";
-import { FaLinkedin, SiGithub } from "../../icons";
+import { FaLinkedin, GrDocumentDownload, SiGithub } from "../../icons";
 import s from "./index.module.scss";
 
 export const WelcomeCard = (): JSX.Element => {
   const navigate = useNavigate();
   const { handlePageNavigation } = useContext(NavContext) as NavContextType;
+  const { t } = useLanguageContext();
 
   return (
     <>
@@ -36,15 +38,15 @@ export const WelcomeCard = (): JSX.Element => {
           >
             <div className={s.welcome_text_container}>
               <p className={`title4 medium ${s.stack_text}`}>
-                DESENVOLVEDOR FULL STACK
+                {t("generics.stack")}
               </p>
               <h1 className={`title1 bold ${s.welcome_text}`}>
-                Olá, meu nome é <br /> Bernardo Stein,
+                {t("home.section1.welcome")}
+                <br /> Bernardo Stein,
               </h1>
 
               <p className={`title4 height2 ${s.welcome_bio}`}>
-                sou um desenvolvedor full stack especializado em construir
-                experiências digitais excepcionais.
+                {t("home.section1.welcomeMessage")}
               </p>
             </div>
             <div className={s.buttons_container}>
@@ -56,11 +58,11 @@ export const WelcomeCard = (): JSX.Element => {
                   handlePageNavigation("contact");
                 }}
               >
-                Contato
+                {t("buttons.contact")}
               </motion.button>
-              {/* <motion.button whileTap={{ scale: 0.9 }} className="title4">
-                <GrDocumentDownload /> Download CV
-              </motion.button> */}
+              <motion.button whileTap={{ scale: 0.9 }} className="title4">
+                <GrDocumentDownload /> {t("buttons.resume")}
+              </motion.button>
             </div>
             <div className={s.socialIcons_container}>
               <Link to={"https://github.com/CodeBernardo"}>

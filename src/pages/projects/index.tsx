@@ -4,6 +4,7 @@ import { ProjectCard } from "../../components/cards/projectsCard/projectCard";
 import { ProjectsNav } from "../../components/nav";
 import { backEndProjects, frontEndProjects } from "../../data";
 import { NavContext } from "../../providers";
+import { useLanguageContext } from "../../providers/langContext";
 import { NavContextType } from "../../providers/navContext/index";
 import s from "./index.module.scss";
 
@@ -13,7 +14,7 @@ export const ProjectsPage = (): JSX.Element => {
   const [scope, animate] = useAnimate();
 
   const { handlePageNavigation } = useContext(NavContext) as NavContextType;
-
+  const { language } = useLanguageContext();
   useEffect(() => {
     handlePageNavigation(window.location.pathname);
   });
@@ -41,19 +42,31 @@ export const ProjectsPage = (): JSX.Element => {
             {projectsList === "all" &&
               allProjects.map((project, i) => (
                 <li key={i}>
-                  <ProjectCard project={project} type={project.type} />
+                  <ProjectCard
+                    project={project}
+                    type={project.type}
+                    language={language}
+                  />
                 </li>
               ))}
             {projectsList === "backEnd" &&
               backEndProjects.map((project, i) => (
                 <li key={i}>
-                  <ProjectCard project={project} type={project.type} />
+                  <ProjectCard
+                    project={project}
+                    type={project.type}
+                    language={language}
+                  />
                 </li>
               ))}
             {projectsList === "frontEnd" &&
               frontEndProjects.map((project, i) => (
                 <li key={i}>
-                  <ProjectCard project={project} type={project.type} />
+                  <ProjectCard
+                    project={project}
+                    type={project.type}
+                    language={language}
+                  />
                 </li>
               ))}
           </ul>
