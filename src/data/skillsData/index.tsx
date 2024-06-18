@@ -1,8 +1,8 @@
 import {
   BiLogoPostgresql,
-  BiLogoSpringBoot,
-  FaAngular,
-  FaJava,
+  // BiLogoSpringBoot,
+  // FaAngular,
+  // FaJava,
   FaNodeJs,
   SiBun,
   SiCss3,
@@ -22,7 +22,7 @@ import {
   SiSass,
   SiTailwindcss,
   SiTypescript,
-  SiWordpress,
+  // SiWordpress,
 } from "../../components/icons";
 import { Skill } from "../../interfaces";
 
