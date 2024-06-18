@@ -30,6 +30,7 @@ export const SkillsList = (): JSX.Element => {
         {hardSkillsList.map((skill, i) => (
           <li className={skill.name} key={i}>
             {skill.icon}
+            <small>{skill.name}</small>
           </li>
         ))}
       </ul>

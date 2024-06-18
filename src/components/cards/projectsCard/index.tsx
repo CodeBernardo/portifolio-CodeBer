@@ -2,13 +2,13 @@ import { AnimatePresence, motion, useAnimate, useInView } from "framer-motion";
 import { wrap } from "popmotion";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { backEndProjects } from "../../../data";
 import { NavContext } from "../../../providers";
 import { useLanguageContext } from "../../../providers/langContext";
 import { NavContextType } from "../../../providers/navContext";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "../../icons";
 import s from "./index.module.scss";
 import { ProjectCard } from "./projectCard";
+import { allProjects } from "../../../data/projectsData";
 
 export const ProjectsSection = (): JSX.Element => {
   const { handlePageNavigation } = useContext(NavContext) as NavContextType;
@@ -72,7 +72,7 @@ export const ProjectsSection = (): JSX.Element => {
 
   const [[page, direction], setPage] = useState([0, 0]);
 
-  const projectIndex = wrap(0, backEndProjects.length, page);
+  const projectIndex = wrap(0, allProjects.length, page);
 
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
@@ -134,7 +134,7 @@ export const ProjectsSection = (): JSX.Element => {
                 }}
               >
                 <ProjectCard
-                  project={backEndProjects[projectIndex]}
+                  project={allProjects[projectIndex]}
                   language={language}
                   type={"BACK END"}
                 />

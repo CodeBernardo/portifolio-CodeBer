@@ -382,3 +382,5 @@ export const backEndProjects: Project[] = [
     },
   },
 ];
+
+export const allProjects = [...frontEndProjects, ...backEndProjects]

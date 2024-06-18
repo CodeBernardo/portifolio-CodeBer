@@ -97,22 +97,22 @@ export const hardSkillsList: Skill[] = [
     name: "PostgreSQL",
     icon: <BiLogoPostgresql size={iconSize} />,
   },
-  {
-    name: "Wordpress",
-    icon: <SiWordpress size={iconSize} />,
-  },
-  {
-    name: "Java",
-    icon: <FaJava size={iconSize} />,
-  },
+  // {
+  //   name: "Wordpress",
+  //   icon: <SiWordpress size={iconSize} />,
+  // },
+  // {
+  //   name: "Java",
+  //   icon: <FaJava size={iconSize} />,
+  // },
   {
     name: "Python",
     icon: <SiPython size={iconSize} />,
   },
-  {
-    name: "Spring boot",
-    icon: <BiLogoSpringBoot size={iconSize} />,
-  },
+  // {
+  //   name: "Spring boot",
+  //   icon: <BiLogoSpringBoot size={iconSize} />,
+  // },
   {
     name: "Jest",
     icon: <SiJest size={iconSize} />,
@@ -121,8 +121,8 @@ export const hardSkillsList: Skill[] = [
     name: "Docker",
     icon: <SiDocker size={iconSize} />,
   },
-  {
-    name: "Angular",
-    icon: <FaAngular size={iconSize} />,
-  },
+  // {
+  //   name: "Angular",
+  //   icon: <FaAngular size={iconSize} />,
+  // },
 ];
